@@ -56,7 +56,7 @@ const HeroCarousal = () => {
 
           <div>
             <Image
-              src="/images/hero/hero-01.png"
+              src="/images/HomePageImages/1.webp"
               alt="headphone"
               width={351}
               height={358}
@@ -96,7 +96,7 @@ const HeroCarousal = () => {
 
           <div>
             <Image
-              src="/images/hero/hero-01.png"
+              src="/images/HomePageImages/2.webp"
               alt="headphone"
               width={351}
               height={358}

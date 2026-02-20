@@ -198,34 +198,46 @@ const Header = () => {
                     </button>
 
                     {/* Search Results Dropdown */}
-                    {showSearchResults && searchResults.length > 0 && (
+                    {showSearchResults && searchQuery.trim() && (
                       <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-3 rounded-md shadow-lg z-9999 max-h-[400px] overflow-y-auto">
                         <div className="p-2">
-                          {searchResults.map((product) => (
-                            <div
-                              key={product.id}
-                              onClick={() => handleProductClick(product.id)}
-                              className="flex items-center gap-3 p-2 hover:bg-gray-1 rounded cursor-pointer transition-colors"
-                            >
-                              <div className="flex-shrink-0 w-12 h-12 relative">
-                                <Image
-                                  src={product.img}
-                                  alt={product.title}
-                                  fill
-                                  className="object-cover rounded"
-                                  sizes="48px"
-                                />
+                          {searchResults.length > 0 ? (
+                            searchResults.map((product) => (
+                              <div
+                                key={product.id}
+                                onClick={() => handleProductClick(product.id)}
+                                className="flex items-center gap-3 p-2 hover:bg-gray-1 rounded cursor-pointer transition-colors"
+                              >
+                                <div className="flex-shrink-0 w-12 h-12 relative">
+                                  {product.img ? (
+                                    <Image
+                                      src={product.img}
+                                      alt={product.title}
+                                      fill
+                                      className="object-cover rounded"
+                                      sizes="48px"
+                                    />
+                                  ) : (
+                                    <div className="w-full h-full bg-gray-2 rounded flex items-center justify-center text-gray-400 text-xs">
+                                      No Image
+                                    </div>
+                                  )}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-medium text-dark truncate">
+                                    {product.title}
+                                  </p>
+                                  <p className="text-xs text-dark-4 truncate">
+                                    ₹{product.discountedPrice.toLocaleString('en-IN')}
+                                  </p>
+                                </div>
                               </div>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-dark truncate">
-                                  {product.title}
-                                </p>
-                                <p className="text-xs text-dark-4 truncate">
-                                  ₹{product.discountedPrice.toLocaleString('en-IN')}
-                                </p>
-                              </div>
+                            ))
+                          ) : (
+                            <div className="p-4 text-center text-dark-4 text-sm">
+                              No products found matching your search.
                             </div>
-                          ))}
+                          )}
                         </div>
                       </div>
                     )}
@@ -340,26 +352,26 @@ const Header = () => {
                 <span className="block relative cursor-pointer w-5.5 h-5.5">
                   <span className="du-block absolute right-0 w-full h-full">
                     <span
-                      className={`block relative top-0 left-0 bg-dark rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${!navigationOpen && "!w-full delay-300"
+                      className={`block relative top-0 left-0 bg-gray-900 rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${!navigationOpen && "!w-full delay-300"
                         }`}
                     ></span>
                     <span
-                      className={`block relative top-0 left-0 bg-dark rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${!navigationOpen && "!w-full delay-400"
+                      className={`block relative top-0 left-0 bg-gray-900 rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${!navigationOpen && "!w-full delay-400"
                         }`}
                     ></span>
                     <span
-                      className={`block relative top-0 left-0 bg-dark rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${!navigationOpen && "!w-full delay-500"
+                      className={`block relative top-0 left-0 bg-gray-900 rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${!navigationOpen && "!w-full delay-500"
                         }`}
                     ></span>
                   </span>
 
                   <span className="block absolute right-0 w-full h-full rotate-45">
                     <span
-                      className={`block bg-dark rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-full ${!navigationOpen && "!h-0 delay-[0] "
+                      className={`block bg-gray-900 rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-full ${!navigationOpen && "!h-0 delay-[0] "
                         }`}
                     ></span>
                     <span
-                      className={`block bg-dark rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-2.5 w-full h-0.5 ${!navigationOpen && "!h-0 dealy-200"
+                      className={`block bg-gray-900 rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-2.5 w-full h-0.5 ${!navigationOpen && "!h-0 dealy-200"
                         }`}
                     ></span>
                   </span>

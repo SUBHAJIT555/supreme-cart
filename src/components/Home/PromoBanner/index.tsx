@@ -41,7 +41,7 @@ const PromoBanner = () => {
           </div>
 
           <Image
-            src="/images/promo/promo-01.png"
+            src="/images/HomePageImages/6.webp"
             alt="promo img"
             className="absolute bottom-0 right-4 lg:right-26 -z-1"
             width={274}
@@ -63,7 +63,7 @@ const PromoBanner = () => {
             }}
           >
             <Image
-              src="/images/promo/promo-02.png"
+              src="/images/HomePageImages/7.webp"
               alt="promo img"
               className="absolute top-1/2 -translate-y-1/2 left-3 sm:left-10 -z-1"
               width={241}
@@ -106,7 +106,7 @@ const PromoBanner = () => {
             }}
           >
             <Image
-              src="/images/promo/promo-03.png"
+              src="/images/HomePageImages/5.webp"
               alt="promo img"
               className="absolute top-1/2 -translate-y-1/2 right-3 sm:right-8.5 -z-1"
               width={200}

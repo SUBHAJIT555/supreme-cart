@@ -46,7 +46,7 @@ const Hero = () => {
 
                   <div>
                     <Image
-                      src="/images/hero/hero-02.png"
+                      src="/images/HomePageImages/3.webp"
                       alt="electronics"
                       width={123}
                       height={161}
@@ -75,7 +75,7 @@ const Hero = () => {
 
                   <div>
                     <Image
-                      src="/images/hero/hero-01.png"
+                      src="/images/HomePageImages/4.webp"
                       alt="books stationery garments"
                       width={123}
                       height={161}
