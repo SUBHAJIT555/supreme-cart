@@ -4,9 +4,11 @@ import { useRouter } from "next/navigation";
 import { useAppSelector, AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import { selectCartItems, selectTotalPrice, removeAllItemsFromCart } from "@/redux/features/cart-slice";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { quoteSchema, type QuoteFormData } from "@/lib/schemas";
 import Breadcrumb from "../Common/Breadcrumb";
 import Billing from "./Billing";
-import Shipping from "./Shipping";
 
 const Checkout = () => {
   const router = useRouter();
@@ -16,71 +18,59 @@ const Checkout = () => {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError(null);
-    const form = e.currentTarget;
-    const fd = new FormData(form);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<QuoteFormData>({
+    resolver: zodResolver(quoteSchema),
+  });
 
-    const firstName = (fd.get("firstName") as string)?.trim();
-    const lastName = (fd.get("lastName") as string)?.trim();
-    const email = (fd.get("email") as string)?.trim();
-    const phone = (fd.get("phone") as string)?.trim();
-    const address = (fd.get("address") as string)?.trim();
-    const addressTwo = (fd.get("addressTwo") as string)?.trim();
-    const town = (fd.get("town") as string)?.trim();
-    const country = (fd.get("countryName") as string)?.trim() || (fd.get("country") as string)?.trim();
-    const notes = (fd.get("notes") as string)?.trim();
-
-    if (!firstName || !lastName || !email || !phone || !address || !town) {
-      setError("Please fill in all required fields (First Name, Last Name, Email, Phone, Address, Town/City).");
-      return;
-    }
-
+  const onSubmit = async (data: QuoteFormData) => {
     if (cartItems.length === 0) {
       setError("Your cart is empty. Add items before checkout.");
       return;
     }
 
     setSubmitting(true);
+    setError(null);
+
     try {
       const orderItems = cartItems.map((item) => ({
-        title: item.title,
+        name: item.title,
         quantity: item.quantity,
         price: item.discountedPrice,
       }));
 
-      const res = await fetch("/api/checkout", {
+      const formData = new FormData();
+      formData.append("formType", "quote");
+      formData.append("billing_first_name", data.firstName);
+      formData.append("billing_last_name", data.lastName);
+      formData.append("billing_email", data.email);
+      formData.append("billing_phone", data.phone);
+      formData.append("billing_address", data.address);
+      formData.append("billing_town", data.town);
+      formData.append("billing_state", data.state || "");
+      formData.append("cart_items", JSON.stringify(orderItems));
+      formData.append("cart_total", total.toString());
+      formData.append("order_total", total.toString());
+      if (data.notes) formData.append("notes", data.notes);
+
+      const res = await fetch("/api/submit.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email,
-          phone,
-          address,
-          addressTwo,
-          town,
-          state: "",
-          country,
-          notes,
-          orderItems,
-          total,
-        }),
+        body: formData,
       });
 
-      const data = await res.json().catch(() => ({}));
+      const result = await res.json();
 
       if (!res.ok) {
-        setError(data.error || "Checkout failed. Please try again.");
-        setSubmitting(false);
-        return;
+        throw new Error(result.error || "Failed to submit quote request");
       }
 
       dispatch(removeAllItemsFromCart());
       router.push("/mail-success");
     } catch (err) {
-      setError("Something went wrong. Please try again.");
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
       setSubmitting(false);
     }
   };
@@ -90,22 +80,21 @@ const Checkout = () => {
       <Breadcrumb title={"Request for Quote"} pages={["request for quote"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col lg:flex-row gap-7.5 xl:gap-11">
               {/* checkout left */}
               <div className="lg:max-w-[670px] w-full">
-                <Billing />
-                <Shipping />
+                <Billing register={register} errors={errors} />
                 <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5 mt-7.5">
                   <div>
                     <label htmlFor="notes" className="block mb-2.5">
-                      Other Notes (optional)
+                      Note about your order
                     </label>
                     <textarea
-                      name="notes"
+                      {...register("notes")}
                       id="notes"
                       rows={5}
-                      placeholder="Notes about your order, e.g. special notes for delivery."
+                      placeholder="Note about your order"
                       className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full p-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
                     />
                   </div>

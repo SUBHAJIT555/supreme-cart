@@ -1,6 +1,13 @@
 import React from "react";
+import { UseFormRegister, FieldErrors } from "react-hook-form";
+import { QuoteFormData } from "@/lib/schemas";
 
-const Billing = () => {
+interface BillingProps {
+  register: UseFormRegister<QuoteFormData>;
+  errors: FieldErrors<QuoteFormData>;
+}
+
+const Billing = ({ register, errors }: BillingProps) => {
   return (
     <div className="mt-9">
       <h2 className="font-medium text-dark text-xl sm:text-2xl mb-5.5">
@@ -16,11 +23,15 @@ const Billing = () => {
 
             <input
               type="text"
-              name="firstName"
+              {...register("firstName")}
               id="firstName"
-              placeholder="Jhon"
-              className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+              placeholder="First name"
+              className={`rounded-md border ${errors.firstName ? "border-red" : "border-gray-3"
+                } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
             />
+            {errors.firstName && (
+              <p className="mt-1 text-sm text-red">{errors.firstName.message}</p>
+            )}
           </div>
 
           <div className="w-full">
@@ -30,50 +41,15 @@ const Billing = () => {
 
             <input
               type="text"
-              name="lastName"
+              {...register("lastName")}
               id="lastName"
-              placeholder="Deo"
-              className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+              placeholder="Last name"
+              className={`rounded-md border ${errors.lastName ? "border-red" : "border-gray-3"
+                } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
             />
-          </div>
-        </div>
-
-        <div className="mb-5">
-          <label htmlFor="countryName" className="block mb-2.5">
-            Country/ Region
-            <span className="text-red">*</span>
-          </label>
-
-          <div className="relative">
-            <select
-              name="countryName"
-              id="countryName"
-              defaultValue="India"
-              className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
-            >
-              <option value="India">India</option>
-              <option value="Australia">Australia</option>
-              <option value="America">America</option>
-              <option value="England">England</option>
-            </select>
-
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-dark-4">
-              <svg
-                className="fill-current"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.41469 5.03569L2.41467 5.03571L2.41749 5.03846L7.76749 10.2635L8.0015 10.492L8.23442 10.2623L13.5844 4.98735L13.5844 4.98735L13.5861 4.98569C13.6809 4.89086 13.8199 4.89087 13.9147 4.98569C14.0092 5.08024 14.0095 5.21864 13.9155 5.31345C13.9152 5.31373 13.915 5.31401 13.9147 5.31429L8.16676 10.9622L8.16676 10.9622L8.16469 10.9643C8.06838 11.0606 8.02352 11.0667 8.00039 11.0667C7.94147 11.0667 7.89042 11.0522 7.82064 10.9991L2.08526 5.36345C1.99127 5.26865 1.99154 5.13024 2.08609 5.03569C2.18092 4.94086 2.31986 4.94086 2.41469 5.03569Z"
-                  fill=""
-                  stroke=""
-                  strokeWidth="0.666667"
-                />
-              </svg>
-            </span>
+            {errors.lastName && (
+              <p className="mt-1 text-sm text-red">{errors.lastName.message}</p>
+            )}
           </div>
         </div>
 
@@ -85,21 +61,15 @@ const Billing = () => {
 
           <input
             type="text"
-            name="address"
+            {...register("address")}
             id="address"
-            placeholder="House number and street name"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+            placeholder="Street address"
+            className={`rounded-md border ${errors.address ? "border-red" : "border-gray-3"
+              } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
           />
-
-          {/* <div className="mt-5">
-            <input
-              type="text"
-              name="addressTwo"
-              id="addressTwo"
-              placeholder="Apartment, suite, unit, etc. (optional)"
-              className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
-            />
-          </div> */}
+          {errors.address && (
+            <p className="mt-1 text-sm text-red">{errors.address.message}</p>
+          )}
         </div>
 
         <div className="mb-5">
@@ -109,49 +79,79 @@ const Billing = () => {
 
           <input
             type="text"
-            name="town"
+            {...register("town")}
             id="town"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+            placeholder="Town/City"
+            className={`rounded-md border ${errors.town ? "border-red" : "border-gray-3"
+              } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
           />
+          {errors.town && (
+            <p className="mt-1 text-sm text-red">{errors.town.message}</p>
+          )}
         </div>
 
         <div className="mb-5">
-          <label htmlFor="country" className="block mb-2.5">
-            Country
+          <label htmlFor="state" className="block mb-2.5">
+            State/ Country
           </label>
 
           <input
             type="text"
-            name="country"
-            id="country"
+            {...register("state")}
+            id="state"
+            placeholder="State/Country"
             className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
           />
         </div>
 
         <div className="mb-5">
+          <label htmlFor="postcode" className="block mb-2.5">
+            Postcode/ ZIP
+          </label>
+
+          <input
+            type="text"
+            {...register("postcode")}
+            id="postcode"
+            placeholder="Postcode/ZIP"
+            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+          />
+        </div>
+
+        <div className="mb-5">
+          <label htmlFor="email" className="block mb-2.5">
+            Email <span className="text-red">*</span>
+          </label>
+
+          <input
+            type="email"
+            {...register("email")}
+            id="email"
+            placeholder="Email"
+            className={`rounded-md border ${errors.email ? "border-red" : "border-gray-3"
+              } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
+          />
+          {errors.email && (
+            <p className="mt-1 text-sm text-red">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div className="mb-5.5">
           <label htmlFor="phone" className="block mb-2.5">
             Phone <span className="text-red">*</span>
           </label>
 
           <input
             type="text"
-            name="phone"
+            {...register("phone")}
             id="phone"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+            placeholder="Phone"
+            className={`rounded-md border ${errors.phone ? "border-red" : "border-gray-3"
+              } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
           />
-        </div>
-
-        <div className="mb-5.5">
-          <label htmlFor="email" className="block mb-2.5">
-            Email Address <span className="text-red">*</span>
-          </label>
-
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
-          />
+          {errors.phone && (
+            <p className="mt-1 text-sm text-red">{errors.phone.message}</p>
+          )}
         </div>
       </div>
     </div>
