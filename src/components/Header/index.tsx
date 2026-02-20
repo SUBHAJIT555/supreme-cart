@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import CustomSelect from "./CustomSelect";
 import { menuData } from "./menuData";
 import Dropdown from "./Dropdown";
@@ -9,15 +10,39 @@ import { useSelector } from "react-redux";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
+import categoryData from "@/constants/categoryData";
+import { Product } from "@/types/product";
 
 const Header = () => {
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
+  const [showSearchResults, setShowSearchResults] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("0");
+  const searchRef = useRef<HTMLDivElement>(null);
   const { openCartModal } = useCartModalContext();
 
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
+
+  // Get the 150 selected products for this site
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/api/products');
+        if (response.ok) {
+          const data = await response.json();
+          setProducts(data);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const handleOpenCartModal = () => {
     openCartModal();
@@ -32,19 +57,78 @@ const Header = () => {
     }
   };
 
+  // Filter products based on search query and selected category
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+
+    let filtered = [...products];
+
+    // Filter by category if not "All Categories"
+    if (selectedCategory !== "0") {
+      const categoryId = parseInt(selectedCategory);
+      filtered = filtered.filter((p) => p.categoryId === categoryId);
+    }
+
+    // Filter by search query (search in title and description)
+    const query = searchQuery.toLowerCase().trim();
+    filtered = filtered.filter(
+      (p) =>
+        p.title.toLowerCase().includes(query) ||
+        p.description.toLowerCase().includes(query)
+    );
+
+    // Return max 10 results
+    return filtered.slice(0, 10);
+  }, [searchQuery, selectedCategory, products]);
+
+  // Close search results when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowSearchResults(false);
+      }
+    };
+
+    if (showSearchResults) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showSearchResults]);
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setShowSearchResults(true);
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/shop?search=${encodeURIComponent(searchQuery.trim())}`);
+      setShowSearchResults(false);
+      setSearchQuery("");
+    }
+  };
+
+  const handleProductClick = (productId: number) => {
+    // Navigate to shop page with product ID in query to open modal
+    router.push(`/shop?productId=${productId}`);
+    setShowSearchResults(false);
+    setSearchQuery("");
+  };
+
   const options = [
     { label: "All Categories", value: "0" },
-    { label: "Desktop", value: "1" },
-    { label: "Laptop", value: "2" },
-    { label: "Monitor", value: "3" },
-    { label: "Phone", value: "4" },
-    { label: "Watch", value: "5" },
-    { label: "Mouse", value: "6" },
-    { label: "Tablet", value: "7" },
+    ...categoryData.map((category) => ({
+      label: category.title,
+      value: category.id.toString(),
+    })),
   ];
 
   return (
@@ -69,16 +153,20 @@ const Header = () => {
               />
             </Link>
 
-            <div className="max-w-[475px] w-full">
-              <form>
+            <div className="max-w-[475px] w-full" ref={searchRef}>
+              <form onSubmit={handleSearchSubmit}>
                 <div className="flex items-center">
-                  <CustomSelect options={options} />
+                  <CustomSelect
+                    options={options}
+                    onSelectChange={setSelectedCategory}
+                  />
 
                   <div className="relative max-w-[333px] sm:min-w-[333px] w-full">
                     {/* <!-- divider --> */}
                     <span className="absolute left-0 top-1/2 -translate-y-1/2 inline-block w-px h-5.5 bg-gray-4"></span>
                     <input
-                      onChange={(e) => setSearchQuery(e.target.value)}
+                      onChange={handleSearchChange}
+                      onFocus={() => searchQuery.trim() && setShowSearchResults(true)}
                       value={searchQuery}
                       type="search"
                       name="search"
@@ -89,6 +177,7 @@ const Header = () => {
                     />
 
                     <button
+                      type="submit"
                       id="search-btn"
                       aria-label="Search"
                       className="flex items-center justify-center absolute right-3 top-1/2 -translate-y-1/2 ease-in duration-200 hover:text-blue"
@@ -107,6 +196,39 @@ const Header = () => {
                         />
                       </svg>
                     </button>
+
+                    {/* Search Results Dropdown */}
+                    {showSearchResults && searchResults.length > 0 && (
+                      <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-3 rounded-md shadow-lg z-9999 max-h-[400px] overflow-y-auto">
+                        <div className="p-2">
+                          {searchResults.map((product) => (
+                            <div
+                              key={product.id}
+                              onClick={() => handleProductClick(product.id)}
+                              className="flex items-center gap-3 p-2 hover:bg-gray-1 rounded cursor-pointer transition-colors"
+                            >
+                              <div className="flex-shrink-0 w-12 h-12 relative">
+                                <Image
+                                  src={product.img}
+                                  alt={product.title}
+                                  fill
+                                  className="object-cover rounded"
+                                  sizes="48px"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-medium text-dark truncate">
+                                  {product.title}
+                                </p>
+                                <p className="text-xs text-dark-4 truncate">
+                                  ₹{product.discountedPrice.toLocaleString('en-IN')}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </form>
@@ -202,7 +324,7 @@ const Header = () => {
                       cart
                     </span>
                     <p className="font-medium text-custom-sm text-dark">
-                      ${totalPrice}
+                      ₹{totalPrice.toLocaleString('en-IN')}
                     </p>
                   </div>
                 </button>

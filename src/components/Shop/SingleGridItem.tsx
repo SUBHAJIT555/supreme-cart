@@ -7,18 +7,26 @@ import { addItemToCart } from "@/redux/features/cart-slice";
 import { addItemToWishlist, removeItemFromWishlist } from "@/redux/features/wishlist-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux/store";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 const SingleGridItem = ({ item }: { item: Product }) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const { openModal } = useModalContext();
   const dispatch = useDispatch<AppDispatch>();
   const wishlistItems = useSelector((state: RootState) => state.wishlistReducer.items);
   const isInWishlist = wishlistItems.some((w) => w.id === item.id);
 
-  // update the QuickView state
+  // update the QuickView state and add productId to URL
   const handleQuickViewUpdate = () => {
     dispatch(updateQuickView({ ...item }));
+
+    // Add productId to URL
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("productId", item.id.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
   };
 
   // add to cart
@@ -48,7 +56,7 @@ const SingleGridItem = ({ item }: { item: Product }) => {
   return (
     <div className="group">
       <div className="relative overflow-hidden flex items-center justify-center rounded-lg bg-white shadow-1 min-h-[270px] mb-4">
-        <Image src={item.imgs.previews[0]} alt="" width={250} height={250} />
+        <Image src={item.img} alt={item.title} width={250} height={250} />
 
         <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
           <button
@@ -94,9 +102,8 @@ const SingleGridItem = ({ item }: { item: Product }) => {
             onClick={handleWishlistToggle}
             aria-label={isInWishlist ? "Remove from wishlist" : "Add to wishlist"}
             id="favOne"
-            className={`flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 bg-white hover:opacity-90 ${
-              isInWishlist ? "text-red" : "text-dark hover:text-blue"
-            }`}
+            className={`flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 bg-white hover:opacity-90 ${isInWishlist ? "text-red" : "text-dark hover:text-blue"
+              }`}
           >
             <svg
               className="fill-current"
@@ -165,12 +172,12 @@ const SingleGridItem = ({ item }: { item: Product }) => {
       </div>
 
       <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5">
-        <Link href="/shop-details"> {item.title} </Link>
+        {item.title}
       </h3>
 
       <span className="flex items-center gap-2 font-medium text-lg">
-        <span className="text-dark">${item.discountedPrice}</span>
-        <span className="text-dark-4 line-through">${item.price}</span>
+        <span className="text-dark">₹{item.discountedPrice.toLocaleString('en-IN')}</span>
+        <span className="text-dark-4 line-through">₹{item.price.toLocaleString('en-IN')}</span>
       </span>
     </div>
   );

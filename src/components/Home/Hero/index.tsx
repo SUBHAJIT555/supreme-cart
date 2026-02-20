@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="/shop-with-sidebar"> Electronics & Gadgets </a>
+                      <a href="/shop"> Electronics & Gadgets </a>
                     </h2>
 
                     <div>
@@ -58,7 +58,7 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="/shop-with-sidebar"> Books, Stationery & Garments </a>
+                      <a href="/shop"> Books, Stationery & Garments </a>
                     </h2>
 
                     <div>
@@ -84,7 +84,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              
+
             </div>
           </div>
         </div>

@@ -87,17 +87,17 @@ const SingleItem = ({ item }: { item: Product }) => {
           </div>
 
           <h3 className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5">
-            <Link href="/shop-details"> {item.title} </Link>
+            {item.title}
           </h3>
 
           <span className="flex items-center justify-center gap-2 font-medium text-lg">
-            <span className="text-dark">${item.discountedPrice}</span>
-            <span className="text-dark-4 line-through">${item.price}</span>
+            <span className="text-dark">₹{item.discountedPrice.toLocaleString('en-IN')}</span>
+            <span className="text-dark-4 line-through">₹{item.price.toLocaleString('en-IN')}</span>
           </span>
         </div>
 
         <div className="flex justify-center items-center">
-          <Image src={item.imgs.previews[0]} alt="" width={280} height={280} />
+          <Image src={item.img} alt={item.title} width={280} height={280} />
         </div>
 
         <div className="absolute right-0 bottom-0 translate-x-full u-w-full flex flex-col gap-2 p-5.5 ease-linear duration-300 group-hover:translate-x-0">
@@ -172,9 +172,8 @@ const SingleItem = ({ item }: { item: Product }) => {
             onClick={handleWishlistToggle}
             aria-label={isInWishlist ? "Remove from wishlist" : "Add to wishlist"}
             id="addFavOne"
-            className={`flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 bg-white hover:opacity-90 ${
-              isInWishlist ? "text-red" : "text-dark hover:text-white hover:bg-blue"
-            }`}
+            className={`flex items-center justify-center w-9 h-9 rounded-[5px] shadow-1 ease-out duration-200 bg-white hover:opacity-90 ${isInWishlist ? "text-red" : "text-dark hover:text-white hover:bg-blue"
+              }`}
           >
             <svg
               className="fill-current"

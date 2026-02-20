@@ -1,4 +1,6 @@
 import Home from "@/components/Home";
+import { getSiteNumber } from "@/lib/siteConfig";
+import { selectProducts } from "@/lib/productSelector";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,9 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const siteNumber = getSiteNumber();
+  const products = selectProducts(siteNumber);
+
   return (
     <>
-      <Home />
+      <Home products={products} />
     </>
   );
 }

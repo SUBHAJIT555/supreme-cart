@@ -11,10 +11,15 @@ const initialState = {
     reviews: 0,
     price: 0,
     discountedPrice: 0,
-    img: "",
-    images: [],
     id: 0,
-    imgs: { thumbnails: [], previews: [] },
+    categoryId: 0,
+    img: "",
+    description: "",
+    isNewArrival: false,
+    isBestSelling: false,
+    isTrending: false,
+    rating: 0,
+    inStock: false,
   },
 } as InitialState;
 

@@ -1,11 +1,15 @@
 export type Product = {
+  id: number;
   title: string;
-  reviews: number;
+  categoryId: number;
+  img: string;
   price: number;
   discountedPrice: number;
-  id: number;
-  imgs?: {
-    thumbnails: string[];
-    previews: string[];
-  };
+  reviews: number;
+  description: string;
+  isNewArrival: boolean;
+  isBestSelling: boolean;
+  isTrending: boolean;
+  rating: number;
+  inStock: boolean;
 };

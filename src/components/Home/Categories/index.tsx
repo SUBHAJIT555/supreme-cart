@@ -7,7 +7,7 @@ import Image from "next/image";
 import "swiper/css/navigation";
 import "swiper/css";
 import SingleItem from "./SingleItem";
-import data from "@/constants/categoryData";
+import categoriesData from "@/constants/categoryData";
 
 const Categories = () => {
   const sliderRef = useRef(null);
@@ -134,7 +134,7 @@ const Categories = () => {
               },
             }}
           >
-            {data.map((item, key) => (
+            {categoriesData.map((item, key) => (
               <SwiperSlide key={key}>
                 <SingleItem item={item} />
               </SwiperSlide>

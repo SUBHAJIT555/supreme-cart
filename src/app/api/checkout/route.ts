@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const orderSummary = (orderItems || [])
       .map(
         (item: { title: string; quantity: number; price: number }) =>
-          `- ${item.title} x ${item.quantity} = $${(item.quantity * item.price).toFixed(2)}`
+          `- ${item.title} x ${item.quantity} = ₹${(item.quantity * item.price).toLocaleString('en-IN')}`
       )
       .join("\n");
 
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       ${notes ? `<p><strong>Notes:</strong> ${notes}</p>` : ""}
       <h3>Order Items</h3>
       <pre>${orderSummary}</pre>
-      <p><strong>Total:</strong> $${typeof total === "number" ? total.toFixed(2) : total}</p>
+      <p><strong>Total:</strong> ₹${typeof total === "number" ? total.toLocaleString('en-IN') : total}</p>
     `;
 
     const toEmail = process.env.CHECKOUT_EMAIL_TO || process.env.EMAIL_TO || "support@supremecart.com";

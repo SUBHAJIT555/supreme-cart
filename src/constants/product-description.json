@@ -1,0 +1,683 @@
+[
+    {
+      "id": 1,
+      "description": "A gripping mystery novel filled with unexpected twists and suspense. Perfect for readers who enjoy crime investigations and dark secrets."
+    },
+    {
+      "id": 2,
+      "description": "An immersive fantasy adventure packed with magic, mythical worlds, and heroic journeys. Ideal for fans of epic storytelling."
+    },
+    {
+      "id": 3,
+      "description": "A fast-paced crime fiction novel exploring the darker side of city life. Suspenseful, intense, and hard to put down."
+    },
+    {
+      "id": 4,
+      "description": "A beautifully written historical fiction novel that brings the past to life with rich detail and emotional depth."
+    },
+    {
+      "id": 5,
+      "description": "A practical guide for entrepreneurs and startup founders covering growth strategies, scaling, and real-world business lessons."
+    },
+    {
+      "id": 6,
+      "description": "A comprehensive personal finance guide covering budgeting, investing, and wealth-building strategies for long-term success."
+    },
+    {
+      "id": 7,
+      "description": "Simplified explanations of scientific concepts designed to help students understand complex topics with clarity."
+    },
+    {
+      "id": 8,
+      "description": "A curated collection of timeless literary works from around the world, perfect for literature enthusiasts."
+    },
+    {
+      "id": 9,
+      "description": "Structured study material and practice questions to help students succeed in competitive examinations."
+    },
+    {
+      "id": 10,
+      "description": "A delightful collection of bedtime stories crafted to spark imagination and create memorable reading moments for children."
+    },
+    {
+      "id": 11,
+      "description": "An illustrated edition of the Bhagavad Gita with detailed commentary and spiritual insights for deeper understanding."
+    },
+    {
+      "id": 12,
+      "description": "A practical handbook on meditation techniques and mindfulness practices for stress relief and mental clarity."
+    },
+    {
+      "id": 13,
+      "description": "A strategic guide to business expansion, leadership, and scaling operations effectively."
+    },
+    {
+      "id": 14,
+      "description": "An insightful overview of upcoming technology trends and innovations shaping the future."
+    },
+    {
+      "id": 15,
+      "description": "An inspiring biography highlighting the journey, achievements, and lessons from a visionary leader."
+    },
+    {
+      "id": 16,
+      "description": "A detailed reference book covering major events, timelines, and figures in Indian history."
+    },
+    {
+      "id": 17,
+      "description": "A comprehensive mathematics reference guide for engineering students with formulas and solved examples."
+    },
+    {
+      "id": 18,
+      "description": "A complete CBSE Class 10 Science textbook aligned with the latest curriculum and exam patterns."
+    },
+    {
+      "id": 19,
+      "description": "A practical physics handbook for college students with theories, diagrams, and problem-solving techniques."
+    },
+    {
+      "id": 20,
+      "description": "An engaging workbook filled with fun activities and exercises designed to enhance children's learning skills."
+    },
+  
+    {
+      "id": 21,
+      "description": "High-quality A4 spiral notebook with smooth ruled pages, ideal for school, office, or daily journaling."
+    },
+    {
+      "id": 22,
+      "description": "Premium hardcover notebook designed for professional use with durable binding and elegant finish."
+    },
+    {
+      "id": 23,
+      "description": "Compact 2026 pocket diary perfect for organizing daily schedules and important notes."
+    },
+    {
+      "id": 24,
+      "description": "Smooth-writing blue ball pens in a convenient pack of 10, suitable for school and office use."
+    },
+    {
+      "id": 25,
+      "description": "High-performance black gel pens delivering bold ink flow and comfortable grip for long writing sessions."
+    },
+    {
+      "id": 26,
+      "description": "Luxury fountain pen crafted for precision writing with premium nib and elegant design."
+    },
+    {
+      "id": 27,
+      "description": "Durable 0.5mm mechanical pencil offering consistent writing and ideal for drafting and sketching."
+    },
+    {
+      "id": 28,
+      "description": "Complete geometry box set including compass, ruler, protractor, and essential math tools."
+    },
+    {
+      "id": 29,
+      "description": "Multi-purpose 3-in-1 school backpack set with spacious compartments and durable build."
+    },
+    {
+      "id": 30,
+      "description": "Leak-proof lunch box designed to keep meals fresh and secure for school or office use."
+    },
+    {
+      "id": 31,
+      "description": "Stainless steel water bottle with insulation to keep beverages hot or cold for extended hours."
+    },
+    {
+      "id": 32,
+      "description": "Office file folder pack for organizing documents neatly and efficiently."
+    },
+    {
+      "id": 33,
+      "description": "Heavy-duty stapler built for smooth operation and reliable paper binding."
+    },
+    {
+      "id": 34,
+      "description": "Scientific calculator with advanced mathematical functions suitable for students and professionals."
+    },
+    {
+      "id": 35,
+      "description": "Colorful sticky notes pack ideal for reminders, bookmarks, and organizing tasks."
+    },
+    {
+      "id": 36,
+      "description": "A3 size artist sketchbook with high-quality paper suitable for pencil, charcoal, and ink drawings."
+    },
+    {
+      "id": 37,
+      "description": "24-shade watercolor paint set with vibrant pigments for artistic projects and creative expression."
+    },
+    {
+      "id": 38,
+      "description": "Professional paint brush kit designed for smooth strokes and versatile painting techniques."
+    },
+    {
+      "id": 39,
+      "description": "DIY craft kit for kids encouraging creativity through hands-on art and craft activities."
+    },
+    {
+      "id": 40,
+      "description": "Desk organizer combo set for keeping stationery and workspace essentials neatly arranged."
+    },
+  
+    {
+      "id": 41,
+      "description": "Comfortable cotton round neck T-shirt designed for everyday casual wear."
+    },
+    {
+      "id": 42,
+      "description": "Slim fit casual shirt offering a modern silhouette and breathable fabric."
+    },
+    {
+      "id": 43,
+      "description": "Regular fit jeans made with durable denim for all-day comfort and style."
+    },
+    {
+      "id": 44,
+      "description": "Classic formal trousers tailored for professional and office wear."
+    },
+    {
+      "id": 45,
+      "description": "Lightweight sports shorts designed for workouts, running, and active lifestyles."
+    },
+    {
+      "id": 46,
+      "description": "Warm winter jacket offering insulation and comfort during cold weather."
+    },
+    {
+      "id": 47,
+      "description": "Traditional ethnic kurta set crafted for festive occasions and cultural events."
+    },
+    {
+      "id": 48,
+      "description": "Comfortable track suit designed for training sessions and casual athleisure wear."
+    },
+    {
+      "id": 49,
+      "description": "Soft cotton innerwear pack ensuring breathability and everyday comfort."
+    },
+    {
+      "id": 50,
+      "description": "Classic polo T-shirt with collar design suitable for both casual and semi-formal occasions."
+    }, { "id": 51, "description": "Comfortable hoodie sweatshirt made from soft fabric, ideal for casual wear and layering during cooler days." },
+    { "id": 52, "description": "Classic denim jacket with durable stitching and timeless design, perfect for casual and semi-formal styling." },
+    { "id": 53, "description": "Functional cargo pants featuring multiple utility pockets and rugged construction for everyday comfort." },
+    { "id": 54, "description": "Breathable linen shirt designed for warm weather with a lightweight feel and refined casual look." },
+    { "id": 55, "description": "Lightweight gym vest offering maximum breathability and flexibility for workouts and training sessions." },
+    { "id": 56, "description": "Comfortable printed shorts crafted for relaxed casual wear and summer outings." },
+    { "id": 57, "description": "Tailored formal blazer designed for business meetings, events, and polished professional styling." },
+    { "id": 58, "description": "Soft casual sweatpants built for everyday comfort, lounging, or light physical activity." },
+    { "id": 59, "description": "Performance running tracks designed for flexibility, moisture control, and active movement." },
+    { "id": 60, "description": "Warm woolen sweater providing insulation and comfort during colder seasons." },
+  
+    { "id": 61, "description": "Elegant printed kurti crafted from breathable fabric, perfect for daily wear and festive occasions." },
+    { "id": 62, "description": "Stylish party wear dress designed with modern cuts and flattering silhouette for special events." },
+    { "id": 63, "description": "Comfortable casual top suitable for everyday wear with soft fabric and contemporary styling." },
+    { "id": 64, "description": "Skinny fit jeans designed to contour comfortably while offering stretch and durability." },
+    { "id": 65, "description": "Soft cotton leggings providing flexibility and comfort for daily wear or active use." },
+    { "id": 66, "description": "Premium silk saree featuring rich texture and elegant drape for weddings and traditional functions." },
+    { "id": 67, "description": "Flared skirt designed for graceful movement and versatile styling options." },
+    { "id": 68, "description": "Breathable activewear set built for workouts, yoga sessions, and fitness routines." },
+    { "id": 69, "description": "Comfortable nightwear set designed for relaxed sleep and cozy home wear." },
+    { "id": 70, "description": "Classic denim jacket tailored for women with stylish fit and durable finish." },
+    { "id": 71, "description": "Flowy palazzo pants offering comfort and elegance for both casual and festive occasions." },
+    { "id": 72, "description": "Cozy hoodie sweatshirt designed for warmth and relaxed everyday styling." },
+    { "id": 73, "description": "Formal shirt tailored for office wear, offering a crisp fit and professional appearance." },
+    { "id": 74, "description": "Trendy crop top crafted for modern styling and casual outings." },
+    { "id": 75, "description": "Elegant maxi dress designed with flowing fabric for a graceful and comfortable fit." },
+    { "id": 76, "description": "Traditional ethnic kurta set perfect for festivals, celebrations, and cultural gatherings." },
+    { "id": 77, "description": "Warm winter coat designed for insulation and protection during cold weather." },
+    { "id": 78, "description": "Printed T-shirt made with soft cotton for everyday casual comfort." },
+    { "id": 79, "description": "Stretchable gym leggings providing flexibility and support during workouts." },
+    { "id": 80, "description": "Comfortable cotton night suit designed for breathable and restful sleep." },
+  
+    { "id": 81, "description": "Graphic T-shirt for boys made with soft fabric and vibrant prints for everyday wear." },
+    { "id": 82, "description": "Casual shirt for boys offering breathable comfort and stylish everyday design." },
+    { "id": 83, "description": "Durable denim shorts designed for active play and summer comfort." },
+    { "id": 84, "description": "Ethnic kurta for boys crafted for festive occasions and traditional celebrations." },
+    { "id": 85, "description": "Warm winter jacket for boys providing insulation and protection in cold weather." },
+    { "id": 86, "description": "Floral dress for girls designed with soft fabric and playful patterns for special occasions." },
+    { "id": 87, "description": "Cotton leggings for girls offering stretch and comfort for daily activities." },
+    { "id": 88, "description": "Party skirt designed with stylish flare for festive and celebration wear." },
+    { "id": 89, "description": "Complete school uniform set made from durable fabric for daily academic use." },
+    { "id": 90, "description": "School sweater designed to provide warmth and comfort during cooler school days." },
+    { "id": 91, "description": "Track suit for boys built for sports activities and casual athletic wear." },
+    { "id": 92, "description": "Hoodie jacket for girls offering warmth and stylish everyday layering." },
+    { "id": 93, "description": "Soft cotton pajama set designed for comfortable sleep and home wear." },
+    { "id": 94, "description": "Nightwear set for girls crafted for relaxed sleep and cozy comfort." },
+    { "id": 95, "description": "School socks pack designed for durability, comfort, and daily uniform use." },
+    { "id": 96, "description": "Sports shorts for boys made with breathable fabric for active movement." },
+    { "id": 97, "description": "Printed top for girls offering comfort and stylish everyday wear." },
+    { "id": 98, "description": "Warm winter cap designed to keep kids comfortable during cold weather." },
+    { "id": 99, "description": "Durable jeans for boys offering comfort and long-lasting everyday wear." },
+    { "id": 100, "description": "Ethnic lehenga set for girls crafted for weddings, festivals, and special occasions." },
+        { "id": 101, "description": "Unisex cotton cap made with breathable fabric and adjustable strap for comfortable everyday wear." },
+        { "id": 102, "description": "Warm wool beanie designed to provide insulation and comfort during cold weather." },
+        { "id": 103, "description": "Classic leather wallet featuring multiple card slots and durable stitching for everyday use." },
+        { "id": 104, "description": "Spacious women's handbag crafted with sturdy handles and organized compartments for daily essentials." },
+        { "id": 105, "description": "Stylish backpack with ample storage space, padded straps, and durable material for travel or daily use." },
+        { "id": 106, "description": "Comfortable men's casual shoes designed for daily wear with cushioned sole and durable finish." },
+        { "id": 107, "description": "Elegant formal shoes crafted from premium materials, ideal for office and formal occasions." },
+        { "id": 108, "description": "Lightweight women's sandals offering comfort and versatile styling for casual outings." },
+        { "id": 109, "description": "Sports running shoes engineered for support, breathability, and performance during workouts." },
+        { "id": 110, "description": "Genuine leather belt designed with sturdy buckle and refined finish for formal wear." },
+        { "id": 111, "description": "Unisex sunglasses featuring UV protection lenses and stylish frame for everyday outdoor use." },
+        { "id": 112, "description": "Classic analog watch with durable strap and precise movement for timeless everyday elegance." },
+        { "id": 113, "description": "Elegant clutch purse designed for parties and special occasions with compact yet spacious interior." },
+        { "id": 114, "description": "Travel duffel bag built with strong zippers and roomy compartments for short trips and gym use." },
+        { "id": 115, "description": "Comfortable casual slippers designed with soft sole for relaxed indoor and outdoor wear." },
+        { "id": 116, "description": "Formal leather belt crafted for durability and polished styling for business attire." },
+        { "id": 117, "description": "Cotton ankle socks pack offering breathability, stretch, and everyday comfort." },
+        { "id": 118, "description": "Winter gloves designed to keep hands warm while allowing flexibility and grip." },
+        { "id": 119, "description": "Trendy crossbody bag with adjustable strap and compact design for convenient daily carry." },
+        { "id": 120, "description": "Fashion scarf crafted from soft fabric, perfect for layering and enhancing outfits." },
+      
+        { "id": 121, "description": "Comprehensive guide to advanced Python programming concepts including frameworks, libraries, and real-world applications." },
+        { "id": 122, "description": "Digital marketing essentials covering SEO, social media, content strategy, and online branding techniques." },
+        { "id": 123, "description": "Self-discipline mastery guide focused on productivity habits, mindset building, and goal achievement." },
+        { "id": 124, "description": "Beginner-friendly introduction to stock market investing, covering fundamentals and risk management." },
+        { "id": 125, "description": "Detailed world geography atlas featuring maps, country data, and global insights." },
+        { "id": 126, "description": "English grammar practice book with exercises and examples to strengthen language skills." },
+        { "id": 127, "description": "Data science for beginners explaining core concepts like statistics, Python tools, and analytics basics." },
+        { "id": 128, "description": "Artificial intelligence explained in simple terms, covering machine learning and modern AI applications." },
+        { "id": 129, "description": "Collection of inspirational quotes designed to motivate and encourage personal growth." },
+        { "id": 130, "description": "Public speaking handbook offering practical techniques to improve confidence and communication skills." },
+      
+        { "id": 131, "description": "Premium A5 ruled notebook with smooth pages, ideal for journaling and daily note-taking." },
+        { "id": 132, "description": "Pastel gel pen set delivering smooth ink flow and vibrant colors for creative writing." },
+        { "id": 133, "description": "Transparent pencil box with durable design for organizing school essentials." },
+        { "id": 134, "description": "Mini desk calendar 2026 designed for compact workspace organization and easy date tracking." },
+        { "id": 135, "description": "Highlighter marker pack with bright shades for clear text emphasis and note organization." },
+        { "id": 136, "description": "Permanent marker set with bold ink suitable for labeling and long-lasting marking." },
+        { "id": 137, "description": "Office clipboard folder designed for document support and secure paper organization." },
+        { "id": 138, "description": "Correction tape pack providing smooth application for quick and clean text corrections." },
+        { "id": 139, "description": "Premium writing pad with smooth sheets ideal for meetings and note-taking." },
+        { "id": 140, "description": "36-shade color pencil set offering rich pigments for drawing and artistic projects." },
+      
+        { "id": 141, "description": "Casual check shirt made from breathable fabric with classic pattern for everyday style." },
+        { "id": 142, "description": "Slim fit blazer tailored for modern formal styling and professional occasions." },
+        { "id": 143, "description": "Cotton pajama set designed for relaxed sleep and home comfort." },
+        { "id": 144, "description": "Printed hoodie crafted for warmth and casual streetwear appeal." },
+        { "id": 145, "description": "Lightweight summer shorts offering breathable comfort for warm weather." },
+        { "id": 146, "description": "Running T-shirt engineered for moisture control and athletic performance." },
+        { "id": 147, "description": "Denim shorts designed for casual summer wear with durable fabric." },
+        { "id": 148, "description": "Formal waistcoat tailored for sharp styling at business and festive events." },
+        { "id": 149, "description": "Casual joggers featuring flexible fit and soft fabric for daily comfort." },
+        { "id": 150, "description": "Printed kurta designed for festive occasions with comfortable traditional styling." }, { "id": 151, "description": "Tailored office wear blazer designed for a sharp professional look with structured fit and premium finish." },
+        { "id": 152, "description": "Lightweight summer top crafted from breathable fabric for all-day comfort in warm weather." },
+        { "id": 153, "description": "Casual jumpsuit designed with relaxed fit and modern silhouette for effortless everyday styling." },
+        { "id": 154, "description": "Printed palazzo set combining comfort and elegance, ideal for festive and casual occasions." },
+        { "id": 155, "description": "Flexible yoga pants offering stretch support and comfort for workouts and daily wear." },
+        { "id": 156, "description": "Warm winter sweater designed with soft knit fabric for cozy seasonal comfort." },
+        { "id": 157, "description": "Party clutch dress tailored for special occasions with elegant detailing and flattering fit." },
+        { "id": 158, "description": "Casual shorts made from breathable material for relaxed everyday comfort." },
+        { "id": 159, "description": "Designer saree crafted with premium fabric and intricate detailing for weddings and celebrations." },
+        { "id": 160, "description": "Soft cotton shrug ideal for layering over casual or office outfits." },
+      
+        { "id": 161, "description": "Printed hoodie for boys offering warmth, comfort, and playful everyday style." },
+        { "id": 162, "description": "Summer frock for girls made with lightweight fabric and vibrant design for warm days." },
+        { "id": 163, "description": "Casual tracksuit for kids designed for active play and comfortable movement." },
+        { "id": 164, "description": "Formal shirt for boys tailored for school events and special occasions." },
+        { "id": 165, "description": "Party dress for girls designed with elegant cuts and festive detailing." },
+        { "id": 166, "description": "Winter gloves for kids offering warmth and flexibility during cold weather." },
+        { "id": 167, "description": "Cotton shorts for boys providing breathable comfort for everyday wear." },
+        { "id": 168, "description": "Printed leggings for girls designed with stretch fabric for comfort and style." },
+        { "id": 169, "description": "Durable school backpack for kids featuring spacious compartments and sturdy straps." },
+        { "id": 170, "description": "Ethnic kurti set for girls crafted for festive gatherings and traditional occasions." },
+      
+        { "id": 171, "description": "Classic baseball cap with adjustable strap and durable stitching for everyday casual wear." },
+        { "id": 172, "description": "Leather money bag designed with secure compartments for organized storage of cash and essentials." },
+        { "id": 173, "description": "Shoulder bag for women featuring spacious interior and comfortable carry straps." },
+        { "id": 174, "description": "Sports watch for men with durable build and reliable timekeeping for active lifestyles." },
+        { "id": 175, "description": "Stylish sunglasses with UV protection lenses for safe and fashionable outdoor wear." },
+        { "id": 176, "description": "Casual slippers for men offering cushioned sole and everyday comfort." },
+        { "id": 177, "description": "Fashion hat designed to enhance style while providing light sun protection." },
+        { "id": 178, "description": "Travel laptop backpack with padded compartment and ergonomic straps for daily commute." },
+        { "id": 179, "description": "Unisex wool scarf crafted for warmth and versatile winter styling." },
+        { "id": 180, "description": "Premium leather gloves offering insulation, durability, and refined finish." },
+      
+        { "id": 181, "description": "Leadership development book focused on strategic thinking, influence, and professional growth." },
+        { "id": 182, "description": "Time management guide offering proven techniques to boost productivity and efficiency." },
+        { "id": 183, "description": "Practical handbook on negotiation skills for business, sales, and leadership success." },
+        { "id": 184, "description": "Modern economics guide explaining core concepts, markets, and financial systems." },
+        { "id": 185, "description": "Comprehensive biology reference covering essential theories, diagrams, and exam preparation topics." },
+        { "id": 186, "description": "Chemistry formula handbook with quick-reference equations and key scientific concepts." },
+        { "id": 187, "description": "Physics problem-solving manual featuring step-by-step solutions and practical examples." },
+        { "id": 188, "description": "Creative writing workbook designed to enhance storytelling skills and writing techniques." },
+        { "id": 189, "description": "Entrepreneurship essentials guide covering startup fundamentals and business strategy basics." },
+        { "id": 190, "description": "Mindset for success book focused on personal growth, resilience, and goal achievement." },
+      
+        { "id": 191, "description": "A4 plain notebook with smooth pages ideal for school, office, and creative writing." },
+        { "id": 192, "description": "Premium office diary 2026 designed for professional scheduling and organized planning." },
+        { "id": 193, "description": "Fine tip ball pen set offering smooth writing and consistent ink flow." },
+        { "id": 194, "description": "Desk pen stand organizer designed to keep workspace neat and clutter-free." },
+        { "id": 195, "description": "Heavy duty paper clips pack ensuring secure document organization." },
+        { "id": 196, "description": "Office document file box built for safe storage and easy access to paperwork." },
+        { "id": 197, "description": "Whiteboard marker set with bold ink suitable for presentations and teaching." },
+        { "id": 198, "description": "Student exam writing pad designed for stable writing support during tests." },
+        { "id": 199, "description": "Premium drawing pencil set offering multiple grades for sketching and shading." },
+        { "id": 200, "description": "Assorted craft paper pack with vibrant colors ideal for art and DIY projects." }, { "id": 201, "description": "Breathable linen shorts designed for summer comfort and relaxed everyday wear." },
+        { "id": 202, "description": "Printed casual T-shirt crafted from soft cotton for comfortable daily styling." },
+        { "id": 203, "description": "Winter wool coat tailored for warmth, structure, and refined seasonal layering." },
+        { "id": 204, "description": "Formal office shirt with structured fit and premium fabric for professional settings." },
+        { "id": 205, "description": "Slim fit denim jeans offering modern silhouette with stretch comfort." },
+        { "id": 206, "description": "Lightweight gym training shorts built for flexibility and performance workouts." },
+        { "id": 207, "description": "Casual sleeveless vest designed for layering and active comfort." },
+        { "id": 208, "description": "Printed sweatshirt offering warmth, comfort, and casual everyday style." },
+        { "id": 209, "description": "Traditional sherwani crafted with detailed embroidery for weddings and festive occasions." },
+        { "id": 210, "description": "Cotton lounge pants designed for relaxed comfort at home or travel." },
+      
+        { "id": 211, "description": "Casual denim shorts with modern cut and stretch fabric for everyday comfort." },
+        { "id": 212, "description": "Office pencil skirt tailored for a sharp, professional silhouette." },
+        { "id": 213, "description": "Printed Anarkali suit featuring elegant flare and festive detailing." },
+        { "id": 214, "description": "Formal trousers designed for office wear with structured fit and smooth finish." },
+        { "id": 215, "description": "Winter cardigan made from soft knit fabric for cozy seasonal layering." },
+        { "id": 216, "description": "Casual crop hoodie offering relaxed fit and modern street-style appeal." },
+        { "id": 217, "description": "Silk party saree designed with rich texture and elegant drape for celebrations." },
+        { "id": 218, "description": "Active sports jacket built for flexibility, breathability, and outdoor workouts." },
+        { "id": 219, "description": "Printed maxi skirt featuring flowy design and lightweight comfort." },
+        { "id": 220, "description": "Cotton night gown crafted for breathable comfort and relaxed sleepwear." },
+      
+        { "id": 221, "description": "Cotton summer T-shirt for boys designed for lightweight everyday comfort." },
+        { "id": 222, "description": "Casual party top for girls featuring stylish prints and soft fabric." },
+        { "id": 223, "description": "Winter wool sweater for kids offering warmth and cozy seasonal wear." },
+        { "id": 224, "description": "Traditional kurta pajama set tailored for festive and cultural events." },
+        { "id": 225, "description": "Fancy birthday dress designed with vibrant colors and celebratory flair." },
+        { "id": 226, "description": "School tie and belt set crafted for uniform coordination and durability." },
+        { "id": 227, "description": "Casual jeans pant for boys offering comfort and durable everyday wear." },
+        { "id": 228, "description": "Printed night suit for girls made from soft fabric for comfortable sleep." },
+        { "id": 229, "description": "Water-resistant raincoat jacket designed to keep kids dry during monsoon." },
+        { "id": 230, "description": "Sports track pants for boys offering flexible fit for active movement." },
+      
+        { "id": 231, "description": "Unisex travel cap with adjustable fit for casual outdoor wear." },
+        { "id": 232, "description": "Premium brown leather belt with sturdy buckle and refined finish." },
+        { "id": 233, "description": "Designer handbag for women featuring spacious compartments and elegant detailing." },
+        { "id": 234, "description": "Running sports shoes built with cushioned sole for performance and comfort." },
+        { "id": 235, "description": "Casual flat sandals designed for lightweight comfort and daily wear." },
+        { "id": 236, "description": "Formal leather shoes crafted for office wear with polished finish." },
+        { "id": 237, "description": "Aviator sunglasses featuring UV protection and timeless style." },
+        { "id": 238, "description": "Classic analog wrist watch designed with durable casing and refined dial." },
+        { "id": 239, "description": "Unisex winter muffler offering warmth with versatile styling." },
+        { "id": 240, "description": "Canvas college backpack featuring spacious storage and sturdy straps." },
+      
+        { "id": 241, "description": "Comprehensive guide to modern philosophy covering key thinkers and ideas." },
+        { "id": 242, "description": "Advanced competitive exam practice set with solved examples and mock tests." },
+        { "id": 243, "description": "World war history encyclopedia detailing major events and global impact." },
+        { "id": 244, "description": "Science of space exploration book explaining missions, astronomy, and discoveries." },
+        { "id": 245, "description": "Financial freedom roadmap outlining practical strategies for wealth building." },
+        { "id": 246, "description": "Power of positive thinking book focused on mindset and personal growth." },
+        { "id": 247, "description": "Spoken English improvement guide designed to enhance fluency and confidence." },
+        { "id": 248, "description": "Beginner's coding workbook introducing programming fundamentals step by step." },
+        { "id": 249, "description": "Indian constitution explained in simple language with structured breakdown of articles." },
+        { "id": 250, "description": "Devotional bhajan collection featuring traditional spiritual hymns and lyrics." }, { "id": 251, "description": "Spiral sketch pad with thick, smooth pages ideal for drawing, shading, and creative artwork." },
+        { "id": 252, "description": "Executive leather diary 2026 featuring premium cover and organized daily planning layout." },
+        { "id": 253, "description": "Smooth writing blue gel pen designed for effortless ink flow and precision writing." },
+        { "id": 254, "description": "Transparent document folder for neat storage and easy visibility of important papers." },
+        { "id": 255, "description": "Multipurpose staple pins crafted for secure fastening of office and school documents." },
+        { "id": 256, "description": "Neon highlighter set with vibrant ink for clear marking and note organization." },
+        { "id": 257, "description": "Precision geometry compass tool designed for accurate circles and technical drawings." },
+        { "id": 258, "description": "Student craft scissors with safe grip handle for art and school projects." },
+        { "id": 259, "description": "Sticky memo pad designed for quick reminders, notes, and task organization." },
+        { "id": 260, "description": "Professional calligraphy pen set crafted for elegant lettering and artistic writing." },
+      
+        { "id": 261, "description": "Classic white formal shirt tailored for office wear with crisp finish and structured fit." },
+        { "id": 262, "description": "Casual graphic T-shirt made from soft fabric for relaxed everyday styling." },
+        { "id": 263, "description": "Slim fit chinos offering modern silhouette and all-day comfort." },
+        { "id": 264, "description": "Winter puffer jacket designed for insulation, warmth, and lightweight comfort." },
+        { "id": 265, "description": "Cotton lounge shorts built for breathable comfort at home or casual outings." },
+        { "id": 266, "description": "Sports training track suit engineered for flexibility and athletic performance." },
+        { "id": 267, "description": "Ethnic festive kurta crafted for cultural events and traditional celebrations." },
+        { "id": 268, "description": "Sleeveless casual jacket designed for lightweight layering and urban style." },
+        { "id": 269, "description": "Printed summer shirt offering breathable comfort and vibrant seasonal design." },
+        { "id": 270, "description": "Cotton ankle length socks designed for everyday comfort and moisture control." },
+      
+        { "id": 271, "description": "Elegant evening gown tailored for formal occasions with graceful silhouette." },
+        { "id": 272, "description": "Casual cotton top offering breathable comfort and everyday versatility." },
+        { "id": 273, "description": "High waist denim jeans designed for flattering fit and stretch comfort." },
+        { "id": 274, "description": "Printed summer kurti crafted from lightweight fabric for daily ethnic wear." },
+        { "id": 275, "description": "Designer party saree featuring rich fabric and festive detailing." },
+        { "id": 276, "description": "Casual track pants offering flexible fit and all-day comfort." },
+        { "id": 277, "description": "Winter woolen shawl crafted for warmth with elegant drape." },
+        { "id": 278, "description": "Gym active leggings built with stretch fabric for performance workouts." },
+        { "id": 279, "description": "Floral printed dress designed with flowy fabric for summer styling." },
+        { "id": 280, "description": "Soft cotton nightwear set crafted for breathable and relaxed sleep comfort." },
+      
+        { "id": 281, "description": "Casual polo T-shirt for boys offering smart look and soft comfort." },
+        { "id": 282, "description": "Fancy party frock for girls designed with festive colors and elegant detailing." },
+        { "id": 283, "description": "School sports uniform set designed for active movement and comfort." },
+        { "id": 284, "description": "Printed cotton shorts for boys offering breathable everyday wear." },
+        { "id": 285, "description": "Casual denim jacket for girls crafted for layering and modern style." },
+        { "id": 286, "description": "Winter wool cap for kids providing warmth and snug fit." },
+        { "id": 287, "description": "Traditional festival outfit for boys designed for cultural celebrations." },
+        { "id": 288, "description": "Cotton legging combo pack offering stretch comfort for daily wear." },
+        { "id": 289, "description": "Rainproof school shoes designed for durability and water resistance." },
+        { "id": 290, "description": "Printed summer top for girls featuring lightweight fabric and vibrant design." },
+      
+        { "id": 291, "description": "Unisex casual canvas shoes offering lightweight comfort and versatile styling." },
+        { "id": 292, "description": "Premium black leather wallet with multiple compartments for organized storage." },
+        { "id": 293, "description": "Fashion tote bag designed with spacious interior for daily essentials." },
+        { "id": 294, "description": "Formal oxford shoes crafted with polished finish for professional wear." },
+        { "id": 295, "description": "Stylish block heel sandals offering comfort and modern elegance." },
+        { "id": 296, "description": "Classic round dial wrist watch designed for timeless everyday wear." },
+        { "id": 297, "description": "UV protection sunglasses providing eye safety with modern styling." },
+        { "id": 298, "description": "Cabin size backpack designed for travel convenience and organized storage." },
+        { "id": 299, "description": "Winter wool knitted gloves crafted for warmth and seasonal comfort." },{ "id": 300, "description": "Elegant silk fashion scarf designed with premium fabric for versatile styling and seasonal layering." },
+
+        { "id": 301, "description": "Sony wireless earphones with clear sound, stable Bluetooth connectivity, and compact charging case." },
+        { "id": 302, "description": "Lenovo in-ear wired headphones delivering balanced audio with comfortable ergonomic fit." },
+        { "id": 303, "description": "OnePlus Bullets wireless earphones featuring fast pairing and immersive sound quality." },
+        { "id": 304, "description": "BERIBES over-ear wireless headphones offering deep bass and cushioned comfort." },
+        { "id": 305, "description": "ProCase noise cancelling headphones with NRR33dB protection for focused listening." },
+        { "id": 306, "description": "Sony wired headphones with crisp stereo sound and lightweight foldable design." },
+        { "id": 307, "description": "Belkin kids wireless headphones with volume limiting and soft padded earcups." },
+        { "id": 308, "description": "Promate wired headset delivering clear calls and immersive music playback." },
+        { "id": 309, "description": "Soundcore V20i earbuds featuring powerful bass and long battery performance." },
+        { "id": 310, "description": "Bone conduction Bluetooth sports headphones designed for safe open-ear listening." },
+        { "id": 311, "description": "Anker Q20i hybrid ANC headphones with deep bass and extended battery life." },
+        { "id": 312, "description": "Soundcore Q11i wireless headphones with immersive sound and soft ear cushions." },
+        { "id": 313, "description": "EKSA USB gaming headset with noise-isolating mic and surround sound performance." },
+        { "id": 314, "description": "Soundcore P20i wireless earbuds with compact case and balanced audio output." },
+        { "id": 315, "description": "Soundcore K20i wired earphones offering clear vocals and durable build quality." },
+        { "id": 316, "description": "Boat Bluetooth neckband earphones designed for long playback and secure fit." },
+        { "id": 317, "description": "Anker Soundcore Life U2i neckband with strong bass and water-resistant design." },
+        { "id": 318, "description": "Hoco Type-C wired earphones with stable digital audio output and inline controls." },
+        { "id": 319, "description": "Boat Bassheads wired headset delivering punchy bass and ergonomic in-ear fit." },
+        { "id": 320, "description": "UGREEN 3.5mm wired earphones with high-fidelity audio and durable cable." },
+      
+        { "id": 321, "description": "Anker compact power bank designed for fast portable charging on the go." },
+        { "id": 322, "description": "Anker 6-port USB-C charging station delivering 112W high-speed multi-device charging." },
+        { "id": 323, "description": "Lenovo 65W laptop charger adapter ensuring stable and efficient power delivery." },
+        { "id": 324, "description": "3-in-1 foldable magnetic wireless charging dock for phones, earbuds, and smartwatches." },
+        { "id": 325, "description": "UGREEN 24W PD car charger providing fast charging for smartphones and tablets." },
+        { "id": 326, "description": "UGREEN dual port 20W wall charger with compact design and fast output." },
+        { "id": 327, "description": "UGREEN USB-C extension cable 1M designed for stable and secure data transfer." },
+        { "id": 328, "description": "Magnetic 140W PD fast charging cable built for high-speed power delivery." },
+        { "id": 329, "description": "Belkin 20000mAh USB-C portable charger with high-capacity battery backup." },
+        { "id": 330, "description": "Belkin 10000mAh portable power bank with compact and lightweight design." },
+        { "id": 331, "description": "Anker PowerWave wireless charging pad offering safe and efficient charging." },
+        { "id": 332, "description": "Anker USB-C car charger adapter delivering fast and reliable in-car charging." },
+        { "id": 333, "description": "Aioneus 3-in-1 multi charging cable compatible with multiple device types." },
+        { "id": 334, "description": "Anker Zolo braided charging cable built with reinforced durability." },
+        { "id": 335, "description": "UGREEN iPhone charging cable 1M supporting fast charging and data sync." },
+        { "id": 336, "description": "Samsung USB-C to USB-C cable engineered for high-speed charging and transfer." },
+        { "id": 337, "description": "Belkin fast charge USB-C cable designed for stable power delivery." },
+        { "id": 338, "description": "Anker Nano II 65W GaN charger with compact high-efficiency charging technology." },
+        { "id": 339, "description": "AJEEK 33W fast charger adapter providing rapid and reliable power output." },
+        { "id": 340, "description": "UGREEN 18W USB charger adapter designed for quick and efficient charging." },
+      
+        { "id": 341, "description": "PanzerGlass matte finish phone case offering scratch resistance and sleek design." },
+        { "id": 342, "description": "Heavy duty shockproof phone case built for impact protection and durability." },
+        { "id": 343, "description": "CASETiFY abstract designer case combining stylish design with reliable protection." },
+        { "id": 344, "description": "Rifle Paper floral designer case featuring vibrant prints and durable build." },
+        { "id": 345, "description": "AWQUER faux leather flip case providing full phone coverage and card slots." },
+        { "id": 346, "description": "Brown faux leather flip cover offering elegant look and protective design." },
+        { "id": 347, "description": "Urban Armor Gear Monarch Pro case built with rugged military-grade protection." },
+        { "id": 348, "description": "OTOFLY silicone soft case designed for flexible grip and shock absorption." },
+        { "id": 349, "description": "JETech silicone case offering slim fit and everyday device protection." },
+        { "id": 350, "description": "UGREEN clear case for iPhone 17 providing transparent design with scratch resistance." }, { "id": 351, "description": "Premium milled leather iPhone Pro case offering refined finish and reliable device protection." },
+        { "id": 352, "description": "JETech camera protection case designed to safeguard lenses from scratches and impact." },
+        { "id": 353, "description": "UGREEN MagSafe stand case with 360° rotation and strong magnetic alignment." },
+        { "id": 354, "description": "JETech magnetic protective case ensuring secure fit and everyday shock resistance." },
+        { "id": 355, "description": "NUDIENT carbon fiber case delivering slim profile with durable premium protection." },
+      
+        { "id": 356, "description": "Scratch resistant screen film designed to protect display clarity and touch sensitivity." },
+        { "id": 357, "description": "ProCase tablet screen protector offering high transparency and impact resistance." },
+        { "id": 358, "description": "Nano liquid screen protector providing invisible coating against scratches." },
+        { "id": 359, "description": "Matte privacy tempered glass protecting screen while limiting side visibility." },
+        { "id": 360, "description": "Full screen tempered glass for iPhone delivering 9H hardness protection." },
+        { "id": 361, "description": "HD clear glass screen protector for Honor X9B ensuring crystal clarity." },
+        { "id": 362, "description": "2-pack tempered glass screen protectors with reinforced edge protection." },
+        { "id": 363, "description": "Anti-blue light glass protector reducing eye strain and glare." },
+        { "id": 364, "description": "Precision-fit screen protector compatible with iPhone 17 models." },
+        { "id": 365, "description": "Camera lens protector designed to prevent scratches and dust damage." },
+        { "id": 366, "description": "UV full curved tempered glass providing complete edge-to-edge coverage." },
+        { "id": 367, "description": "15.6-inch anti-glare screen guard reducing reflections and eye fatigue." },
+        { "id": 368, "description": "Matte screen protector delivering smooth touch and fingerprint resistance." },
+        { "id": 369, "description": "Privacy tempered glass shield protecting data from side viewing." },
+        { "id": 370, "description": "9H hardness tempered glass for iPhone ensuring impact resistance." },
+      
+        { "id": 371, "description": "Armfit HULK smartwatch with AMOLED display and advanced fitness tracking." },
+        { "id": 372, "description": "Soft nylon watch band designed for breathable comfort and durability." },
+        { "id": 373, "description": "Amazfit Bip 6 smartwatch featuring health tracking and long battery life." },
+        { "id": 374, "description": "JOYROOM JR-FC3 smartwatch with classic styling and smart notifications." },
+        { "id": 375, "description": "AGM Legion Pro rugged smartwatch built for outdoor and extreme use." },
+        { "id": 376, "description": "Fastrack Horizon S1 smartwatch with modern design and activity tracking." },
+        { "id": 377, "description": "Redmi Watch 5 offering smart fitness monitoring and sleek finish." },
+        { "id": 378, "description": "Huawei Watch Fit 4 with vibrant display and advanced health features." },
+        { "id": 379, "description": "Huawei Watch GT 6 smartwatch combining premium design and performance." },
+        { "id": 380, "description": "Kids multifunction smartwatch with colorful display and basic calling support." },
+        { "id": 381, "description": "Kids smartwatch designed with fun interface and safety features." },
+        { "id": 382, "description": "SKMEI digital sports watch with water resistance and rugged design." },
+        { "id": 383, "description": "iBrit 49mm smartwatch with aluminum body and Bluetooth connectivity." },
+        { "id": 384, "description": "Ultra 8 smartwatch with Bluetooth calling and large display." },
+        { "id": 385, "description": "Smart fitness watch with 1.85-inch display and health monitoring." },
+      
+        { "id": 386, "description": "IP68 waterproof fitness tracker band with heart rate monitoring." },
+        { "id": 387, "description": "GPS-enabled smart fitness band for accurate activity tracking." },
+        { "id": 388, "description": "Pulse fitness tracker with extended 30-day battery performance." },
+        { "id": 389, "description": "Xiaomi Smart Band 10 featuring AMOLED display and health metrics." },
+        { "id": 390, "description": "Xiaomi Band 5 fitness bracelet with multi-sport tracking modes." },
+        { "id": 391, "description": "Heart rate and sleep monitoring fitness tracker wristband." },
+        { "id": 392, "description": "Huawei Band 11 Pro smart band with advanced health insights." },
+        { "id": 393, "description": "Fitness wristband with step counter and activity tracking features." },
+        { "id": 394, "description": "Garmin HRM-Dual monitor delivering accurate real-time heart rate data." },
+        { "id": 395, "description": "Smart bracelet fitness tracker with multi-activity support." },
+      
+        { "id": 396, "description": "Soundcore Boom 2 outdoor speaker delivering powerful 80W audio output." },
+        { "id": 397, "description": "Yango Yasmina Midi smart speaker with 24W balanced sound." },
+        { "id": 398, "description": "Zebronics 40W wireless speaker with dynamic sound performance." },
+        { "id": 399, "description": "Soundcore Select 4 Go portable speaker built for travel use." },
+        { "id": 400, "description": "JBL GO 4 ultra-portable Bluetooth speaker with signature sound clarity." },
+            { "id": 401, "description": "20W wireless Bluetooth speaker delivering loud, balanced audio with portable design." },
+            { "id": 402, "description": "Mini karaoke Bluetooth speaker with dual microphones for party entertainment." },
+            { "id": 403, "description": "Soundcore Motion Boom Plus outdoor speaker with powerful bass and waterproof build." },
+            { "id": 404, "description": "JBL Clip 5 ultra-portable waterproof speaker with integrated carry clip." },
+            { "id": 405, "description": "Cabasse The Pearl Myuki premium wireless speaker with high-fidelity sound output." },
+            { "id": 406, "description": "Soundcore Select 4 Go Bluetooth speaker built for travel and outdoor use." },
+            { "id": 407, "description": "Razer Leviathan V2 X compact gaming soundbar with immersive stereo audio." },
+            { "id": 408, "description": "JBL PartyBox On-The-Go speaker with deep bass and portable party design." },
+            { "id": 409, "description": "JBL Flip 7 portable Bluetooth speaker with powerful sound and durable body." },
+            { "id": 410, "description": "8-inch trolley Bluetooth speaker with strong bass and rechargeable battery." },
+          
+            { "id": 411, "description": "Logitech G203 wired gaming mouse with precise tracking and RGB lighting." },
+            { "id": 412, "description": "Logitech Pebble M350s slim Bluetooth mouse with quiet click technology." },
+            { "id": 413, "description": "Logitech M720 Triathlon multi-device wireless mouse with long battery life." },
+            { "id": 414, "description": "Logitech Lift vertical ergonomic mouse designed for wrist comfort." },
+            { "id": 415, "description": "Razer Basilisk V3 gaming mouse with customizable buttons and precision sensor." },
+            { "id": 416, "description": "UGREEN ergonomic wireless mouse offering smooth tracking and reliable connectivity." },
+            { "id": 417, "description": "Logitech M330 Silent Plus wireless mouse with noise-reduction clicks." },
+            { "id": 418, "description": "Logitech MX Anywhere 3S compact wireless mouse with advanced tracking." },
+            { "id": 419, "description": "Logitech M185 wireless mouse with simple plug-and-play functionality." },
+            { "id": 420, "description": "Logitech M90 wired USB mouse offering reliable everyday performance." },
+          
+            { "id": 421, "description": "Logitech MK540 wireless keyboard combo with comfortable full-size layout." },
+            { "id": 422, "description": "Logitech MK295 silent wireless keyboard with low-noise typing experience." },
+            { "id": 423, "description": "Logitech MX Keys Mini compact illuminated keyboard with smart backlighting." },
+            { "id": 424, "description": "Logitech MX Keys S wireless keyboard designed for precision typing." },
+            { "id": 425, "description": "iClever GK08 wireless keyboard with slim profile and stable connectivity." },
+            { "id": 426, "description": "SteelSeries Apex 5 hybrid mechanical keyboard with RGB lighting." },
+            { "id": 427, "description": "60% wired mechanical gaming keyboard with compact and responsive keys." },
+            { "id": 428, "description": "WEETOTUNG 61-key backlit mechanical keyboard for gaming setups." },
+            { "id": 429, "description": "Logitech K250 Bluetooth keyboard with numeric keypad and smooth typing." },
+            { "id": 430, "description": "Logitech K120 wired business keyboard with durable spill-resistant design." },
+          
+            { "id": 431, "description": "Silicon Power 64GB USB 3.0 flash drive for fast data transfer." },
+            { "id": 432, "description": "SanDisk 256GB Ultra Fit USB drive with compact high-speed storage." },
+            { "id": 433, "description": "Vicylif 512GB USB flash drive offering large capacity storage." },
+            { "id": 434, "description": "SanDisk Cruzer Glide USB 3.0 drive with retractable connector design." },
+            { "id": 435, "description": "Lexar dual USB-A and USB-C flash drive for flexible device compatibility." },
+            { "id": 436, "description": "SanDisk Ultra 512GB dual drive with high-speed data access." },
+            { "id": 437, "description": "SanDisk 64GB OTG dual drive for smartphones and laptops." },
+            { "id": 438, "description": "SanDisk Ultra Flair 128GB USB drive with sleek metal casing." },
+            { "id": 439, "description": "SanDisk 64GB USB flash drive designed for everyday storage needs." },
+            { "id": 440, "description": "SanDisk 32GB Cruzer Blade USB 2.0 drive with compact design." },
+          
+            { "id": 441, "description": "15.6-inch leather laptop bag with padded compartments for business use." },
+            { "id": 442, "description": "Canvas laptop tote bag with padded sleeve for daily carry." },
+            { "id": 443, "description": "JETech 15-inch laptop bag case offering lightweight device protection." },
+            { "id": 444, "description": "Water-resistant 15.6-inch laptop backpack with organized storage." },
+            { "id": 445, "description": "Lenovo Legion Armored backpack with reinforced padding for gamers." },
+            { "id": 446, "description": "MOSISO hard case laptop sleeve providing shockproof protection." },
+            { "id": 447, "description": "UGREEN shockproof laptop sleeve with water-resistant exterior." },
+            { "id": 448, "description": "HP Prelude 15.6-inch laptop backpack with ergonomic padded straps." },
+            { "id": 449, "description": "MATEIN water-resistant laptop backpack with multi-pocket storage." },
+            { "id": 450, "description": "Lenovo B210 casual laptop backpack designed for daily commute." },
+                { "id": 451, "description": "24W Philips MESON LED downlight with bright 6500K daylight illumination." },
+                { "id": 452, "description": "Flexible USB-powered LED lamp ideal for laptops and portable lighting." },
+                { "id": 453, "description": "Touch sensor LED table lamp with adjustable brightness levels." },
+                { "id": 454, "description": "Lepro 9.2W desk lamp delivering 750 lumens for focused workspace lighting." },
+                { "id": 455, "description": "SKY-TOUCH LED bedside lamp with soft glow and touch controls." },
+                { "id": 456, "description": "Rechargeable LED emergency lantern suitable for power outages." },
+                { "id": 457, "description": "5-meter smart LED strip lights with remote control and color modes." },
+                { "id": 458, "description": "Smart E27 LED bulb with remote control and adjustable lighting modes." },
+                { "id": 459, "description": "Philips 12W B22 LED bulb providing bright 6500K daylight output." },
+                { "id": 460, "description": "Philips 9W E27 essential LED bulb offering cool daylight illumination." },
+              
+                { "id": 461, "description": "UGREEN universal travel adapter compatible with multiple socket types." },
+                { "id": 462, "description": "UGREEN Nexode 65W power strip with high-speed multi-device charging." },
+                { "id": 463, "description": "Masterplug 4-socket extension reel with 15-meter durable cable." },
+                { "id": 464, "description": "GONGNIU 3-in-1 power strip with individual power switches." },
+                { "id": 465, "description": "MX surge protector spike guard with four universal sockets." },
+                { "id": 466, "description": "TOPREK 8-way extension lead with individual safety switches." },
+                { "id": 467, "description": "UGREEN 7-port powered USB 3.0 hub for fast data transfer." },
+                { "id": 468, "description": "UGREEN 6-in-1 surge protector with PD 30W fast charging support." },
+                { "id": 469, "description": "NNarken 6-way extension cord with 5-meter heavy-duty cable." },
+                { "id": 470, "description": "INFLUX 4-outlet 5-meter extension cord for home and office use." },
+              
+                { "id": 471, "description": "2000W portable indoor heater with remote control for adjustable warmth." },
+                { "id": 472, "description": "Philips Viva Collection 2-slot toaster for quick breakfast preparation." },
+                { "id": 473, "description": "BLACK+DECKER glass chopper and mincer for efficient food prep." },
+                { "id": 474, "description": "Ninja Foodi 3-in-1 hand blender for blending, mixing, and chopping." },
+                { "id": 475, "description": "Prestige 2000W infrared cooktop with rapid heat technology." },
+                { "id": 476, "description": "Black & Decker 750W sandwich maker for quick toasted snacks." },
+                { "id": 477, "description": "Bajaj Ninja 500W mixer grinder with multi-jar versatility." },
+                { "id": 478, "description": "Panasonic heavy-weight dry iron for smooth and wrinkle-free clothes." },
+                { "id": 479, "description": "Philips 3000 Series handheld garment steamer for quick wrinkle removal." },
+                { "id": 480, "description": "Philips 2200W 1.7L electric kettle with fast boiling system." },
+              
+                { "id": 481, "description": "Smart WiFi plug with mobile app control for home automation." },
+                { "id": 482, "description": "Digital air quality monitor displaying real-time indoor readings." },
+                { "id": 483, "description": "USB rechargeable table fan with compact and portable design." },
+                { "id": 484, "description": "Electric aroma diffuser with LED lighting for relaxing ambiance." },
+                { "id": 485, "description": "Portable mini humidifier for improved indoor air moisture." },
+                { "id": 486, "description": "Electric mosquito killer lamp for safe insect control indoors." },
+                { "id": 487, "description": "Smart WiFi LED night light with remote and app functionality." },
+                { "id": 488, "description": "Compact digital kitchen weighing scale with precise measurement display." },
+                { "id": 489, "description": "Cordless handheld vacuum cleaner for quick and easy cleaning." },
+                { "id": 490, "description": "Mini electric coffee frother for creamy beverages at home." },
+              
+                { "id": 491, "description": "Portable 1800W induction cooktop with energy-efficient heating." },
+                { "id": 492, "description": "Rechargeable LED camping lantern for outdoor adventures." },
+                { "id": 493, "description": "Digital alarm clock with bright LED display and time settings." },
+                { "id": 494, "description": "Touchless automatic soap dispenser for hygienic hand washing." },
+                { "id": 495, "description": "Smart IR remote controller to manage multiple home appliances." },
+              
+                { "id": 496, "description": "Premium notebook with high-quality pages for writing and notes." },
+                { "id": 497, "description": "Casual women's top designed for comfort and everyday wear." },
+                { "id": 498, "description": "Classic wristwatch with timeless design and durable build." },
+                { "id": 499, "description": "Smart LED bulb with wireless control and adjustable brightness." },
+                { "id": 500, "description": "Compact power strip with multiple sockets for organized power management." }
+              
+          
+      ]

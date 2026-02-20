@@ -1,14 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 
-const PriceDropdown = () => {
-  const [toggleDropdown, setToggleDropdown] = useState(true);
+interface PriceDropdownProps {
+  minPrice: number;
+  maxPrice: number;
+  onPriceChange: (min: number, max: number) => void;
+}
 
+const PriceDropdown = ({ minPrice, maxPrice, onPriceChange }: PriceDropdownProps) => {
+  const [toggleDropdown, setToggleDropdown] = useState(true);
   const [selectedPrice, setSelectedPrice] = useState({
-    from: 0,
-    to: 100,
+    from: minPrice,
+    to: maxPrice,
   });
+  const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    setSelectedPrice({
+      from: minPrice,
+      to: maxPrice,
+    });
+  }, [minPrice, maxPrice]);
+
+  // Cleanup debounce timer on unmount
+  useEffect(() => {
+    return () => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="bg-white shadow-1 rounded-lg">
@@ -50,31 +72,46 @@ const PriceDropdown = () => {
             <RangeSlider
               id="range-slider-gradient"
               className="margin-lg"
-              step={'any'}
-              onInput={(e) =>
-                setSelectedPrice({
+              min={0}
+              max={10000}
+              step={100}
+              value={[selectedPrice.from, selectedPrice.to]}
+              onInput={(e) => {
+                const newPrice = {
                   from: Math.floor(e[0]),
                   to: Math.ceil(e[1]),
-                })
-              }
+                };
+                // Update local state immediately for responsive UI
+                setSelectedPrice(newPrice);
+                
+                // Clear existing debounce timer
+                if (debounceTimerRef.current) {
+                  clearTimeout(debounceTimerRef.current);
+                }
+                
+                // Debounce the URL update (500ms delay)
+                debounceTimerRef.current = setTimeout(() => {
+                  onPriceChange(newPrice.from, newPrice.to);
+                }, 500);
+              }}
             />
 
             <div className="price-amount flex items-center justify-between pt-4">
               <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  ₹
                 </span>
                 <span id="minAmount" className="block px-3 py-1.5">
-                  {selectedPrice.from}
+                  {selectedPrice.from.toLocaleString('en-IN')}
                 </span>
               </div>
 
               <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  ₹
                 </span>
                 <span id="maxAmount" className="block px-3 py-1.5">
-                  {selectedPrice.to}
+                  {selectedPrice.to.toLocaleString('en-IN')}
                 </span>
               </div>
             </div>

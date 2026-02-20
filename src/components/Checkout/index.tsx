@@ -156,7 +156,7 @@ const Checkout = () => {
                           </div>
                           <div>
                             <p className="text-dark text-right">
-                              ${(item.discountedPrice * item.quantity).toFixed(2)}
+                              ₹{(item.discountedPrice * item.quantity).toLocaleString('en-IN')}
                             </p>
                           </div>
                         </div>
@@ -169,7 +169,7 @@ const Checkout = () => {
                       </div>
                       <div>
                         <p className="font-medium text-lg text-dark text-right">
-                          ${total.toFixed(2)}
+                          ₹{total.toLocaleString('en-IN')}
                         </p>
                       </div>
                     </div>
