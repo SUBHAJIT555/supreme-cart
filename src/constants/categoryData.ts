@@ -44,6 +44,11 @@ const data = [
     id: 9,
     img: "/images/categories/categories-03.png",
   },
+  {
+    title: "Fashion Accessories",
+    id: 10,
+    img: "/images/categories/categories-07.png",
+  },
 ];
 
 export default data;
