@@ -28,7 +28,7 @@ const Footer = () => {
             </p>
 
             {/* <!-- Social Links start --> */}
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <a
                 href="#"
                 aria-label="Facebook Social Link"
@@ -123,7 +123,7 @@ const Footer = () => {
                   </defs>
                 </svg>
               </a>
-            </div>
+            </div> */}
             {/* <!-- Social Links end --> */}
           </div>
 
@@ -209,19 +209,20 @@ const Footer = () => {
               <div className="flex items-center gap-3 lg:justify-end">
                 <span className="flex-shrink-0 w-10 h-10 rounded-full bg-blue/10 flex items-center justify-center">
                   <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     width="20"
                     height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-blue"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-map-pin text-blue"
                   >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M4.25 8.51464C4.25 4.45264 7.77146 1.25 12 1.25C16.2285 1.25 19.75 4.45264 19.75 8.51464C19.75 12.3258 17.3871 16.8 13.5748 18.4292C12.574 18.8569 11.426 18.8569 10.4252 18.4292C6.61289 16.8 4.25 12.3258 4.25 8.51464ZM12 2.75C8.49655 2.75 5.75 5.38076 5.75 8.51464C5.75 11.843 7.85543 15.6998 11.0147 17.0499C11.639 17.3167 12.361 17.3167 12.9853 17.0499C16.1446 15.6998 18.25 11.843 18.25 8.51464C18.25 5.38076 15.5034 2.75 12 2.75Z"
-                      fill="currentColor"
-                    />
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" />
                   </svg>
                 </span>
                 <span className="text-dark">{siteConfig.brand.address.location}</span>
@@ -261,7 +262,7 @@ const Footer = () => {
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-5 flex-wrap items-center justify-between">
             <p className="text-dark font-medium">
-              &copy; {year}. All rights reserved by PimjoLabs.
+              &copy; {year}. All rights reserved by Supreme Cart.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
