@@ -58,10 +58,16 @@ const Billing = () => {
           </label>
 
           <div className="relative">
-            <select className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary">
-              <option value="0">Australia</option>
-              <option value="1">America</option>
-              <option value="2">England</option>
+            <select
+              name="countryName"
+              id="countryName"
+              defaultValue="India"
+              className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-none focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
+            >
+              <option value="India">India</option>
+              <option value="Australia">Australia</option>
+              <option value="America">America</option>
+              <option value="England">England</option>
             </select>
 
             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-dark-4">
@@ -101,7 +107,7 @@ const Billing = () => {
           <div className="mt-5">
             <input
               type="text"
-              name="address"
+              name="addressTwo"
               id="addressTwo"
               placeholder="Apartment, suite, unit, etc. (optional)"
               className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
