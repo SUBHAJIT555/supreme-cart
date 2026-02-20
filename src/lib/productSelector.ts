@@ -9,7 +9,12 @@ type Category = {
   img: string;
 };
 
-const TOTAL_PRODUCTS = 150;
+const TOTAL_PRODUCTS = 500;
+
+// Number of products to assign each flag
+const NEW_ARRIVAL_COUNT = 50;
+const BEST_SELLING_COUNT = 50;
+const TRENDING_COUNT = 50;
 
 function seededShuffle<T>(array: T[], seed: string): T[] {
   const rng = seedrandom(seed);
@@ -84,5 +89,48 @@ export function selectProducts(siteNumber: number): Product[] {
     selectedProducts.push(...additional);
   }
   
-  return seededShuffle(selectedProducts, finalSeed);
+  const finalProducts = seededShuffle(selectedProducts, finalSeed);
+  
+  // Randomly assign flags based on site number
+  const flagsSeed = `site-${siteNumber}-flags`;
+  const flagsRng = seedrandom(flagsSeed);
+  
+  // Reset all flags first
+  finalProducts.forEach(product => {
+    product.isNewArrival = false;
+    product.isBestSelling = false;
+    product.isTrending = false;
+  });
+  
+  // Create a shuffled copy of indices for flag assignment
+  const indices = finalProducts.map((_, index) => index);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(flagsRng() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  
+  // Assign new arrival flag
+  for (let i = 0; i < Math.min(NEW_ARRIVAL_COUNT, indices.length); i++) {
+    finalProducts[indices[i]].isNewArrival = true;
+  }
+  
+  // Assign best selling flag (skip already assigned new arrivals)
+  let bestSellingAssigned = 0;
+  for (let i = 0; i < indices.length && bestSellingAssigned < BEST_SELLING_COUNT; i++) {
+    if (!finalProducts[indices[i]].isNewArrival) {
+      finalProducts[indices[i]].isBestSelling = true;
+      bestSellingAssigned++;
+    }
+  }
+  
+  // Assign trending flag (skip already assigned new arrivals and best selling)
+  let trendingAssigned = 0;
+  for (let i = 0; i < indices.length && trendingAssigned < TRENDING_COUNT; i++) {
+    if (!finalProducts[indices[i]].isNewArrival && !finalProducts[indices[i]].isBestSelling) {
+      finalProducts[indices[i]].isTrending = true;
+      trendingAssigned++;
+    }
+  }
+  
+  return finalProducts;
 }
