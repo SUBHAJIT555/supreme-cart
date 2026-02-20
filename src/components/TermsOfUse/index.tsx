@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 const TermsOfUse = () => {
   return (
     <>
-      <Breadcrumb title={"Terms of Use"} pages={["Terms of Use"]} />
+      <Breadcrumb title={"Terms and Conditions"} pages={["Terms and Conditions"]} />
 
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
@@ -13,10 +13,10 @@ const TermsOfUse = () => {
             <div className="prose prose-lg max-w-none">
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Terms of Use
+                  Terms and Conditions
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  Welcome to {siteConfig.brand.name}. These Terms of Use ("Terms") govern your access to and use of our website, products, and services. By accessing or using our website, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our website.
+                  Welcome to {siteConfig.brand.name}. We are an Indian e-commerce company selling electronics, stationery, books, and garments across India. These Terms and Conditions (&quot;Terms&quot;) govern your use of our website and services. By using {siteConfig.brand.name}, you agree to these Terms. If you do not agree, please do not use our website.
                 </p>
               </div>
 
@@ -25,23 +25,23 @@ const TermsOfUse = () => {
                   Acceptance of Terms
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                  By accessing or using our website, you accept and agree to be bound by these Terms and our Privacy Policy and Cookie Policy. If you do not agree, you must not use our services.
                 </p>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Use License
+                  Use of Our Website
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  Permission is granted to temporarily access the materials on {siteConfig.brand.name}'s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                  You may use {siteConfig.brand.name} for personal, non-commercial shopping only. You may not:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Modify or copy the materials</li>
-                  <li>Use the materials for any commercial purpose or for any public display</li>
-                  <li>Attempt to decompile or reverse engineer any software contained on the website</li>
-                  <li>Remove any copyright or other proprietary notations from the materials</li>
-                  <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                  <li>Copy, modify, or misuse any content or software on the website</li>
+                  <li>Use the site for any commercial resale or unauthorized purpose</li>
+                  <li>Attempt to reverse engineer or interfere with the website or its security</li>
+                  <li>Remove any copyright or trademark notices</li>
+                  <li>Use the site in any way that is illegal or harms {siteConfig.brand.name} or other users</li>
                 </ul>
               </div>
 
@@ -63,10 +63,10 @@ const TermsOfUse = () => {
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Product Information and Pricing
+                  Products, Pricing, and Availability
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We strive to provide accurate product descriptions, images, and pricing. However, we do not warrant that product descriptions, images, or other content on our website is accurate, complete, reliable, current, or error-free. Prices are subject to change without notice. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update information at any time without prior notice.
+                  We sell electronics, stationery, books, and garments, all under ₹10,000. We try to keep product descriptions, images, and prices accurate, but we do not guarantee that everything on the site is error-free or always available. Prices are in Indian Rupees (₹) and may change. We may correct errors or update information at any time. Product availability is subject to stock.
                 </p>
               </div>
 
@@ -75,14 +75,14 @@ const TermsOfUse = () => {
                   Orders and Payment
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  When you place an order through our website:
+                  When you place an order on {siteConfig.brand.name}:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>You agree to provide current, complete, and accurate purchase and account information</li>
-                  <li>You agree to promptly update your account and payment information</li>
-                  <li>We reserve the right to refuse or cancel your order at any time</li>
-                  <li>We reserve the right to limit or prohibit orders that appear to be placed by dealers, resellers, or distributors</li>
-                  <li>You agree to pay all charges incurred by your account</li>
+                  <li>You must provide correct and complete delivery and payment details</li>
+                  <li>You are responsible for keeping your account and payment information up to date</li>
+                  <li>We may refuse or cancel an order (e.g. suspected fraud, pricing error, or stock issues)</li>
+                  <li>We may limit quantities or refuse orders that appear to be for commercial resale</li>
+                  <li>You agree to pay all charges for orders placed using your account (UPI, card, or other methods)</li>
                 </ul>
               </div>
 
@@ -91,32 +91,32 @@ const TermsOfUse = () => {
                   Prohibited Uses
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  You may not use our website:
+                  You must not use our website:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
-                  <li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent</li>
-                  <li>To impersonate or attempt to impersonate the company, a company employee, another user, or any other person or entity</li>
-                  <li>In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful</li>
-                  <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the website</li>
+                  <li>In any way that breaks applicable Indian laws or regulations</li>
+                  <li>To send unsolicited advertising or spam without our written consent</li>
+                  <li>To impersonate {siteConfig.brand.name}, our staff, or any other user</li>
+                  <li>To do anything fraudulent, harmful, or that infringes others&apos; rights</li>
+                  <li>To disrupt or misuse the website or other users&apos; experience</li>
                 </ul>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Intellectual Property Rights
+                  Intellectual Property
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  The website and its original content, features, and functionality are owned by {siteConfig.brand.name} and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our website without our prior written consent.
+                  The {siteConfig.brand.name} website and its content (text, images, logos, design) are owned by us and protected by copyright and other intellectual property laws. You may not copy, modify, distribute, or use our content for commercial purposes without our prior written permission.
                 </p>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  User Content
+                  Returns and Refunds
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  Our website may allow you to post, link, store, share, and otherwise make available certain information, text, graphics, or other material ("User Content"). You are responsible for User Content that you post on or through the website. By posting User Content, you grant us a non-exclusive, worldwide, royalty-free, perpetual, irrevocable license to use, reproduce, modify, adapt, publish, translate, and distribute such User Content.
+                  We offer a 7-day return policy on eligible items in unused condition with original packaging. Refunds will be processed as per our Refund Policy. For details on how to return an item or claim a refund, please see our Refund Policy page or contact customer support.
                 </p>
               </div>
 
@@ -125,7 +125,7 @@ const TermsOfUse = () => {
                   Disclaimer of Warranties
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, {siteConfig.brand.name} excludes all representations, warranties, conditions, and terms relating to our website and the use of this website. We do not warrant that the website will be available at all times or that the website will be error-free, virus-free, or free from other harmful components.
+                  Our website and services are provided &quot;as is.&quot; To the extent permitted by law, {siteConfig.brand.name} does not guarantee that the site will always be available, error-free, or free of viruses or other harmful elements. We do our best to keep the site secure and accurate but make no warranties beyond what is required by applicable law.
                 </p>
               </div>
 
@@ -134,7 +134,7 @@ const TermsOfUse = () => {
                   Limitation of Liability
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  In no event shall {siteConfig.brand.name}, its directors, employees, or agents be liable to you or any third party for any indirect, consequential, incidental, special, or punitive damages, including lost profit, lost revenue, loss of data, or other damages arising from your use of the website, even if we have been advised of the possibility of such damages.
+                  To the fullest extent permitted by applicable law, {siteConfig.brand.name} and its directors, employees, or agents shall not be liable for any indirect, incidental, special, or consequential damages (including loss of profit, data, or business) arising from your use of the website or our services. Our total liability for any claim related to your use of the site shall not exceed the amount you paid to us for the order in question, or one thousand Indian Rupees (₹1,000), whichever is lower.
                 </p>
               </div>
 
@@ -161,25 +161,25 @@ const TermsOfUse = () => {
                   Governing Law
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  These Terms shall be interpreted and governed by the laws of the jurisdiction in which {siteConfig.brand.name} operates, without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+                  These Terms are governed by the laws of India. Any dispute arising from or related to these Terms or your use of {siteConfig.brand.name} shall be subject to the exclusive jurisdiction of the courts in India. Our failure to enforce any part of these Terms does not waive our right to enforce it later.
                 </p>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Changes to Terms
+                  Changes to These Terms
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our website after any revisions become effective, you agree to be bound by the revised terms.
+                  We may update these Terms from time to time. Changes will be posted on this page with an updated &quot;Last Updated&quot; date. For significant changes, we may give notice by email or a notice on the website. By continuing to use {siteConfig.brand.name} after changes take effect, you agree to the updated Terms.
                 </p>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Contact Information
+                  Contact Us
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  If you have any questions about these Terms of Use, please contact us:
+                  For questions about these Terms and Conditions, please contact us:
                 </p>
                 <div className="bg-gray-1 rounded-md p-5 text-gray-600">
                   <p className="mb-2">

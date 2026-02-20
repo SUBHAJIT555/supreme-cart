@@ -16,7 +16,7 @@ const RefundPolicy = () => {
                   Refund Policy
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  At {siteConfig.brand.name}, we want you to be completely satisfied with your purchase. If you are not satisfied with your order, we offer a refund policy to ensure your peace of mind.
+                  {siteConfig.brand.name} is an Indian e-commerce company selling electronics, stationery, books, and garments across India. We want you to be satisfied with your purchase. If you are not, we offer an easy 7-day return and refund policy.
                 </p>
               </div>
 
@@ -25,14 +25,14 @@ const RefundPolicy = () => {
                   Eligibility for Refunds
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  To be eligible for a refund, the following conditions must be met:
+                  To be eligible for a refund, the following must be met:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Items must be returned within 30 days of the delivery date</li>
-                  <li>Items must be unused, unwashed, and in their original condition with tags attached</li>
-                  <li>Items must be in their original packaging</li>
-                  <li>Proof of purchase (order number or receipt) must be provided</li>
-                  <li>Certain items such as personalized or custom-made products may not be eligible for refund</li>
+                  <li>Items must be returned within 7 days of delivery</li>
+                  <li>Items must be unused and in original condition with tags attached (where applicable)</li>
+                  <li>Items must be in original packaging where possible</li>
+                  <li>You must provide your order number or proof of purchase</li>
+                  <li>Personalized or custom-made items may not be eligible for refund</li>
                 </ul>
               </div>
 
@@ -41,14 +41,14 @@ const RefundPolicy = () => {
                   How to Request a Refund
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  To initiate a refund, please follow these steps:
+                  To request a refund:
                 </p>
                 <ol className="list-decimal pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Contact our customer service team via email at {siteConfig.brand.email.support} or call us at {siteConfig.brand.phone}</li>
-                  <li>Provide your order number and reason for the refund request</li>
-                  <li>Our team will review your request and provide you with a Return Authorization (RA) number</li>
-                  <li>Package the item(s) securely in the original packaging</li>
-                  <li>Include the RA number and return the package to the address provided</li>
+                  <li>Contact us by email at {siteConfig.brand.email.support} or phone at {siteConfig.brand.phone}</li>
+                  <li>Provide your order number and reason for the refund</li>
+                  <li>We will review your request and send you a Return Authorization (RA) number and return address</li>
+                  <li>Pack the item(s) securely, ideally in the original packaging</li>
+                  <li>Include the RA number and ship the package to the address we provide</li>
                 </ol>
               </div>
 
@@ -60,13 +60,13 @@ const RefundPolicy = () => {
                   Once we receive your returned item(s):
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>We will inspect the item(s) within 5-7 business days of receipt</li>
-                  <li>If approved, your refund will be processed within 10-14 business days</li>
-                  <li>Refunds will be issued to the original payment method used for the purchase</li>
-                  <li>You will receive an email confirmation once the refund has been processed</li>
+                  <li>We will inspect the item(s) within 3–5 business days of receipt</li>
+                  <li>If approved, your refund will be processed within 5–10 business days</li>
+                  <li>Refunds will be credited to the original payment method (UPI, card, net banking, etc.)</li>
+                  <li>You will receive an email/SMS once the refund has been processed</li>
                 </ul>
                 <p className="text-gray-600">
-                  Please note that shipping costs are non-refundable unless the return is due to our error or a defective product.
+                  Delivery charges are non-refundable unless the return is due to our error or a defective/wrong product.
                 </p>
               </div>
 
@@ -75,10 +75,10 @@ const RefundPolicy = () => {
                   Return Shipping
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  Customers are responsible for return shipping costs unless the return is due to our error, a defective product, or if otherwise stated in our return policy. We recommend using a trackable shipping service and retaining proof of shipment.
+                  You are responsible for the cost of sending the item back to us, unless the return is due to our mistake, a defective product, or a wrong item. We recommend using a trackable courier and keeping proof of shipment.
                 </p>
                 <p className="text-gray-600">
-                  If you received a damaged or incorrect item, please contact us immediately, and we will arrange for a prepaid return label at no cost to you.
+                  If you received a damaged or incorrect item, contact us within 48 hours and we will arrange a prepaid return at no cost to you.
                 </p>
               </div>
 
@@ -87,24 +87,24 @@ const RefundPolicy = () => {
                   Non-Refundable Items
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  The following items are not eligible for refunds:
+                  The following are generally not eligible for refunds:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Items that have been used, washed, or damaged by the customer</li>
-                  <li>Items without original tags or packaging</li>
-                  <li>Personalized, custom-made, or monogrammed items</li>
-                  <li>Gift cards and promotional items</li>
-                  <li>Items returned after the 30-day return period</li>
-                  <li>Digital products and downloadable content</li>
+                  <li>Items that have been used, damaged, or altered by you</li>
+                  <li>Items without original tags or packaging where required</li>
+                  <li>Personalized or custom-made items</li>
+                  <li>Gift cards and certain promotional items</li>
+                  <li>Items returned after the 7-day return window</li>
+                  <li>Digital or downloadable products</li>
                 </ul>
               </div>
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Exchange Policy
+                  Exchanges
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We currently do not offer direct exchanges. If you wish to exchange an item, please return the original item for a refund and place a new order for the desired item. This ensures you receive the correct size, color, or style without delay.
+                  We do not offer direct exchanges. To get a different size, colour, or item, return the original product for a refund and place a new order. This way you get the correct product without delay.
                 </p>
               </div>
 
@@ -113,7 +113,7 @@ const RefundPolicy = () => {
                   Damaged or Defective Items
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  If you receive a damaged or defective item, please contact us within 48 hours of delivery. We will arrange for a replacement or full refund, including return shipping costs. Please include photos of the damage or defect when contacting us.
+                  If you receive a damaged or defective product, contact us within 48 hours of delivery. We will arrange a replacement or full refund, including return shipping. Please share photos of the damage or defect when you contact us.
                 </p>
               </div>
 
@@ -122,12 +122,12 @@ const RefundPolicy = () => {
                   Late or Missing Refunds
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  If you haven't received your refund within the expected timeframe:
+                  If you have not received your refund within the expected time:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Check your bank account or credit card statement</li>
-                  <li>Contact your bank or credit card company, as it may take some time for the refund to be posted</li>
-                  <li>If you've done the above and still haven't received your refund, please contact us at support@addina.com</li>
+                  <li>Check your bank account, UPI app, or card statement—refunds can take a few extra days to appear</li>
+                  <li>Contact your bank or payment provider if needed</li>
+                  <li>If you still have not received the refund after that, contact us at {siteConfig.brand.email.support}</li>
                 </ul>
               </div>
 
@@ -136,7 +136,7 @@ const RefundPolicy = () => {
                   Contact Us
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  If you have any questions about our refund policy, please contact us:
+                  For any questions about our Refund Policy, please contact us:
                 </p>
                 <div className="bg-gray-1 rounded-md p-5 text-gray-600">
                   <p className="mb-2">
@@ -156,7 +156,7 @@ const RefundPolicy = () => {
 
               <div className="pt-4 border-t border-gray-3">
                 <p className="text-gray-600 text-sm">
-                  <strong className="text-dark">Last Updated:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  <strong className="text-dark">Last Updated:</strong> {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
                 </p>
               </div>
             </div>

@@ -12,64 +12,52 @@ const FAQs = () => {
 
   const faqs = [
     {
+      question: "What does Supreme Cart sell?",
+      answer: "Supreme Cart is an Indian online store selling electronics (mobile accessories, smart gadgets, computer accessories, home electronics), books, stationery, and garments for men, women, and kids. All products are priced under ₹10,000."
+    },
+    {
+      question: "Do you deliver across India?",
+      answer: "Yes. We ship to all states and union territories in India. Delivery times vary by location—usually 3–7 business days. Free delivery is available on orders above ₹499."
+    },
+    {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, and Google Pay. All payments are processed securely through our encrypted payment gateway."
-    },
-    {
-      question: "How long does shipping take?",
-      answer: "Standard shipping typically takes 5-7 business days. Express shipping options are available at checkout for 2-3 business day delivery. International shipping may take 10-14 business days depending on the destination."
-    },
-    {
-      question: "Do you offer international shipping?",
-      answer: "Yes, we ship to most countries worldwide. Shipping costs and delivery times vary by location. You can calculate shipping costs at checkout before completing your order."
+      answer: "We accept UPI, debit and credit cards (Visa, MasterCard, RuPay), net banking, and other popular Indian payment options. All payments are processed securely."
     },
     {
       question: "What is your return policy?",
-      answer: "We offer a 30-day return policy on unused items in their original packaging with tags attached. Items must be returned within 30 days of delivery. Please refer to our Refund Policy page for complete details."
+      answer: "We offer a 7-day easy return policy. Items should be unused and in original packaging with tags. For full details, visit our Refund Policy or Terms and Conditions page."
     },
     {
       question: "How do I track my order?",
-      answer: "Once your order ships, you'll receive a tracking number via email. You can use this tracking number on our website or the carrier's website to track your package's progress."
+      answer: "After your order is shipped, you'll get an email and SMS with a tracking link. You can track your order on our website or on the courier partner's site using that link."
     },
     {
-      question: "Can I cancel or modify my order?",
-      answer: "Orders can be cancelled or modified within 24 hours of placement, provided they haven't been shipped yet. Please contact our customer service team immediately if you need to make changes to your order."
+      question: "Can I cancel or change my order?",
+      answer: "You can cancel or change your order before it is shipped. Contact our support as soon as possible with your order number so we can try to update it."
     },
     {
-      question: "What if I receive a damaged or incorrect item?",
-      answer: "If you receive a damaged or incorrect item, please contact us within 48 hours of delivery. We'll arrange for a replacement or full refund, including return shipping costs. Please include photos of the issue when contacting us."
+      question: "What if I receive a damaged or wrong item?",
+      answer: "If you receive a damaged or incorrect product, contact us within 48 hours with your order number and photos. We will arrange a replacement or refund as per our policy."
     },
     {
-      question: "Do you offer gift wrapping?",
-      answer: "Yes, we offer gift wrapping services for an additional fee. You can select this option during checkout. We can also include a personalized message with your gift."
+      question: "Are all products really under ₹10,000?",
+      answer: "Yes. Supreme Cart focuses on value for Indian customers. Every product on our site is priced under ₹10,000—electronics, books, stationery, and garments included."
     },
     {
-      question: "How do I create an account?",
-      answer: "Click on 'Sign In' or 'Register' in the top navigation, fill in your details, and verify your email address. Creating an account allows you to track orders, save your address, and access exclusive offers."
+      question: "How do I contact Supreme Cart?",
+      answer: `Reach us by email at ${siteConfig.brand.email.general || siteConfig.brand.email.support}, phone at ${siteConfig.brand.phone}, or the contact form on our website. We're here to help during ${siteConfig.brand.businessHours}.`
     },
     {
-      question: "How can I update my account information?",
-      answer: "Log into your account and navigate to 'My Account' where you can update your personal information, shipping addresses, payment methods, and password."
+      question: "Do you have offers or discounts?",
+      answer: "We run regular promotions and seasonal sales. Check the homepage and product pages for current offers. You can also subscribe to our newsletter for updates on deals and new arrivals."
     },
     {
-      question: "Do you have a physical store?",
-      answer: `Yes, we have a physical store located at ${siteConfig.brand.address.full}. Our store hours are ${siteConfig.brand.businessHours}.`
+      question: "Is my data safe with Supreme Cart?",
+      answer: "We take privacy seriously. Your personal and payment information is protected. For full details on how we collect, use, and protect your data, see our Privacy Policy and Cookie Policy."
     },
     {
-      question: "Are your products authentic?",
-      answer: "Yes, all products sold on our website are 100% authentic and sourced directly from authorized suppliers. We guarantee the authenticity of every item we sell."
-    },
-    {
-      question: "Do you offer discounts or promotions?",
-      answer: "Yes, we regularly offer promotions and discounts. Sign up for our newsletter to receive exclusive offers, or check our website for current promotions. We also offer special discounts for first-time customers."
-    },
-    {
-      question: "How do I contact customer service?",
-      answer: `You can reach our customer service team via email at ${siteConfig.brand.email.support}, phone at ${siteConfig.brand.phone}, or through the contact form on our website. Our team is available ${siteConfig.brand.businessHours}.`
-    },
-    {
-      question: "What is your privacy policy?",
-      answer: "We are committed to protecting your privacy. We collect and use your information only as necessary to provide our services and improve your shopping experience. For complete details, please review our Privacy Policy page."
+      question: "Where is Supreme Cart based?",
+      answer: `Supreme Cart is an Indian brand. Our registered address is ${siteConfig.brand.address.full}. For business hours and contact details, visit our Contact page.`
     }
   ];
 
@@ -85,7 +73,7 @@ const FAQs = () => {
                 Frequently Asked Questions
               </h2>
               <p className="text-gray-600">
-                Find answers to common questions about our products, shipping, returns, and more. If you can't find what you're looking for, please don't hesitate to contact us.
+                Find answers to common questions about our products, shipping, returns, and more. If you can&apos;t find what you&apos;re looking for, please don&apos;t hesitate to contact us.
               </p>
             </div>
 
@@ -135,7 +123,7 @@ const FAQs = () => {
                   Still have questions?
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Can't find the answer you're looking for? Our customer service team is here to help.
+                  Can&apos;t find the answer you&apos;re looking for? Our customer service team is here to help.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a

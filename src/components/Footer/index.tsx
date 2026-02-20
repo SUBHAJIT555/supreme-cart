@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
 const Footer = () => {
@@ -23,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-600 mb-7.5">
-              It helps designers plan out where the content will sit, the content to be written and approved.
+              Supreme Cart is India&apos;s trusted store for electronics, books, stationery, and garments all under ₹10,000. Enjoy honest prices, fast delivery, and support made for Indian shoppers.
             </p>
 
             {/* <!-- Social Links start --> */}
@@ -128,33 +129,38 @@ const Footer = () => {
 
           <div className="w-full sm:w-auto">
             <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Account
+              Quick Links
             </h2>
 
             <ul className="flex flex-col gap-3.5">
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  My Account
+                <Link className="ease-out duration-200 hover:text-blue" href="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <a className="ease-out duration-200 hover:text-blue" href="/shop-with-sidebar">
+                  Shop
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Login / Register
+                <a className="ease-out duration-200 hover:text-blue" href="/about">
+                  About
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
+                <a className="ease-out duration-200 hover:text-blue" href="/contact">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a className="ease-out duration-200 hover:text-blue" href="/cart">
                   Cart
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Wishlist
-                </a>
-              </li>
-              <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Shop
+                <a className="ease-out duration-200 hover:text-blue" href="/faqs">
+                  FAQ
                 </a>
               </li>
             </ul>
@@ -162,33 +168,28 @@ const Footer = () => {
 
           <div className="w-full sm:w-auto">
             <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Quick Link
+              Legal
             </h2>
 
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3.5">
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="/privacy-policy">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="/refund-policy">
-                  Refund Policy
+                <a className="ease-out duration-200 hover:text-blue" href="/cookie-policy">
+                  Cookie Policy
                 </a>
               </li>
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="/terms-of-use">
-                  Terms of Use
+                  Terms and Conditions
                 </a>
               </li>
               <li>
-                <a className="ease-out duration-200 hover:text-blue" href="/faqs">
-                  FAQ’s
-                </a>
-              </li>
-              <li>
-                <a className="ease-out duration-200 hover:text-blue" href="contact">
-                  Contact
+                <a className="ease-out duration-200 hover:text-blue" href="/refund-policy">
+                 Refund Policy
                 </a>
               </li>
             </ul>

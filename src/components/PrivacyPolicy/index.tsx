@@ -16,10 +16,10 @@ const PrivacyPolicy = () => {
                   Introduction
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  At {siteConfig.brand.name}, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+                  {siteConfig.brand.name} is an Indian e-commerce company selling electronics, stationery, books, and garments to customers across India. We are committed to protecting your privacy and the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.
                 </p>
                 <p className="text-gray-600">
-                  By using our website, you consent to the data practices described in this policy. If you do not agree with the data practices described in this Privacy Policy, you should not use our website.
+                  By using {siteConfig.brand.name}, you agree to the practices described in this policy. If you do not agree, please do not use our website.
                 </p>
               </div>
 
@@ -32,19 +32,19 @@ const PrivacyPolicy = () => {
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
                   <li>
-                    <strong className="text-dark">Personal Information:</strong> Name, email address, phone number, shipping address, billing address, and payment information when you make a purchase or create an account.
+                    <strong className="text-dark">Personal Information:</strong> Name, email address, phone number, shipping and billing address when you place an order or create an account.
                   </li>
                   <li>
-                    <strong className="text-dark">Account Information:</strong> Username, password, and profile information when you register for an account.
+                    <strong className="text-dark">Account Information:</strong> Login details and profile information if you register on {siteConfig.brand.name}.
                   </li>
                   <li>
-                    <strong className="text-dark">Transaction Information:</strong> Details about purchases you make, including products purchased, payment method, and transaction history.
+                    <strong className="text-dark">Transaction Information:</strong> Order details, payment method (e.g. UPI, card), and purchase history.
                   </li>
                   <li>
-                    <strong className="text-dark">Usage Information:</strong> Information about how you interact with our website, including pages visited, time spent on pages, and click patterns.
+                    <strong className="text-dark">Usage Information:</strong> How you use our site—pages visited, time on site, and interactions—to improve your experience.
                   </li>
                   <li>
-                    <strong className="text-dark">Device Information:</strong> IP address, browser type, device type, operating system, and other technical information.
+                    <strong className="text-dark">Device Information:</strong> IP address, browser, device type, and operating system for security and compatibility.
                   </li>
                 </ul>
               </div>
@@ -57,13 +57,13 @@ const PrivacyPolicy = () => {
                   We use the information we collect for various purposes, including:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>To process and fulfill your orders and manage your account</li>
-                  <li>To communicate with you about your orders, account, and our services</li>
-                  <li>To send you marketing communications (with your consent)</li>
-                  <li>To improve our website, products, and services</li>
-                  <li>To detect and prevent fraud and abuse</li>
-                  <li>To comply with legal obligations and enforce our terms of service</li>
-                  <li>To personalize your shopping experience</li>
+                  <li>To process orders, deliver products across India, and manage your account</li>
+                  <li>To contact you about orders, delivery, returns, and customer support</li>
+                  <li>To send offers and updates (only with your consent)</li>
+                  <li>To improve our website, product range, and service for Indian customers</li>
+                  <li>To detect and prevent fraud and protect our platform</li>
+                  <li>To comply with applicable Indian laws and our Terms and Conditions</li>
+                  <li>To personalize your experience on {siteConfig.brand.name}</li>
                 </ul>
               </div>
 
@@ -72,20 +72,20 @@ const PrivacyPolicy = () => {
                   Information Sharing and Disclosure
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  We do not sell your personal information. We may share your information in the following circumstances:
+                  {siteConfig.brand.name} does not sell your personal information. We may share it only in these situations:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
                   <li>
-                    <strong className="text-dark">Service Providers:</strong> We may share information with third-party service providers who perform services on our behalf, such as payment processing, shipping, and data analytics.
+                    <strong className="text-dark">Service Providers:</strong> With partners who help us operate our business in India—e.g. payment gateways (for UPI, cards), couriers for delivery, and support tools—under strict confidentiality.
                   </li>
                   <li>
-                    <strong className="text-dark">Legal Requirements:</strong> We may disclose information if required by law or in response to valid legal requests.
+                    <strong className="text-dark">Legal Requirements:</strong> When required by Indian law or in response to valid legal or government requests.
                   </li>
                   <li>
-                    <strong className="text-dark">Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred.
+                    <strong className="text-dark">Business Transfers:</strong> If our business or assets are merged, sold, or transferred, your information may be part of that process, subject to this policy.
                   </li>
                   <li>
-                    <strong className="text-dark">With Your Consent:</strong> We may share information with your explicit consent.
+                    <strong className="text-dark">With Your Consent:</strong> When you have given us clear permission to share your information.
                   </li>
                 </ul>
               </div>
@@ -95,10 +95,10 @@ const PrivacyPolicy = () => {
                   Data Security
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+                  We use technical and organizational measures to protect your data from unauthorized access, alteration, or loss. No internet or electronic system can be completely secure; we work to keep your information safe and do not store full card details on our servers.
                 </p>
                 <p className="text-gray-600">
-                  We use industry-standard encryption technologies and secure payment processing systems to protect your sensitive information, including credit card details.
+                  Payments are processed through secure, compliant gateways. Your UPI, card, and other payment details are handled in line with industry standards so your transactions on {siteConfig.brand.name} remain protected.
                 </p>
               </div>
 
@@ -107,10 +107,10 @@ const PrivacyPolicy = () => {
                   Cookies and Tracking Technologies
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and personalize content. You can control cookies through your browser settings, but disabling cookies may limit your ability to use certain features of our website.
+                  We use cookies and similar technologies to improve your experience on {siteConfig.brand.name}, understand how the site is used, and show relevant content. You can manage cookies in your browser settings; turning them off may affect some features.
                 </p>
                 <p className="text-gray-600">
-                  We use both session cookies (which expire when you close your browser) and persistent cookies (which remain on your device until deleted or expired).
+                  We use session cookies (cleared when you close the browser) and persistent cookies (stored until they expire or you delete them). For more detail, see our Cookie Policy.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ const PrivacyPolicy = () => {
                   Your Rights and Choices
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  Depending on your location, you may have certain rights regarding your personal information:
+                  As a user of {siteConfig.brand.name}, you have the following rights regarding your personal information:
                 </p>
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-600">
                   <li>
@@ -145,10 +145,10 @@ const PrivacyPolicy = () => {
 
               <div className="mb-8">
                 <h2 className="font-semibold text-dark text-2xl mb-4">
-                  Children's Privacy
+                  Children&apos;s Privacy
                 </h2>
                 <p className="text-gray-600">
-                  Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately, and we will take steps to delete such information.
+                  {siteConfig.brand.name} is not directed at anyone under 18. We do not knowingly collect personal information from minors. If you think we have received information from a minor, please contact us and we will delete it promptly.
                 </p>
               </div>
 
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
                   Third-Party Links
                 </h2>
                 <p className="text-gray-600">
-                  Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
+                  Our website may link to third-party sites (e.g. payment or social media). {siteConfig.brand.name} is not responsible for the privacy or content of those sites. We recommend reading their privacy policies before sharing your information.
                 </p>
               </div>
 
@@ -166,7 +166,7 @@ const PrivacyPolicy = () => {
                   Changes to This Privacy Policy
                 </h2>
                 <p className="text-gray-600">
-                  We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically.
+                  We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated &quot;Last Updated&quot; date. For significant changes, we may also notify you by email or a notice on our website. We encourage you to review this policy periodically.
                 </p>
               </div>
 
@@ -175,7 +175,7 @@ const PrivacyPolicy = () => {
                   Contact Us
                 </h2>
                 <p className="text-gray-600 mb-3">
-                  If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
+                  For any questions about this Privacy Policy or how {siteConfig.brand.name} handles your data, please contact us:
                 </p>
                 <div className="bg-gray-1 rounded-md p-5 text-gray-600">
                   <p className="mb-2">
