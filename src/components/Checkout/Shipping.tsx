@@ -11,9 +11,8 @@ const Shipping = () => {
       >
         Ship to a different address?
         <svg
-          className={`fill-current ease-out duration-200 ${
-            dropdown && "rotate-180"
-          }`}
+          className={`fill-current ease-out duration-200 ${dropdown && "rotate-180"
+            }`}
           width="22"
           height="22"
           viewBox="0 0 22 22"
@@ -77,14 +76,7 @@ const Shipping = () => {
             className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
           />
 
-          <div className="mt-5">
-            <input
-              type="text"
-              name="address"
-              placeholder="Apartment, suite, unit, etc. (optional)"
-              className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
-            />
-          </div>
+
         </div>
 
         <div className="mb-5">

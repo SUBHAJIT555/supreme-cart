@@ -76,6 +76,12 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
     return page ? Number(page) : 1;
   }, [searchParams]);
 
+  // Get filter from URL
+  const selectedFilter = useMemo(() => {
+    const filter = searchParams.get("filter");
+    return filter || "latest";
+  }, [searchParams]);
+
   // Get productId from URL and open modal if present
   const productIdFromURL = useMemo(() => {
     const productId = searchParams.get("productId");
@@ -109,9 +115,11 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
   };
 
   const options = [
-    { label: "Latest Products", value: "0" },
-    { label: "Best Selling", value: "1" },
-    { label: "Old Products", value: "2" },
+    { label: "Latest Products", value: "latest" },
+    { label: "New Arrival", value: "new-arrival" },
+    { label: "Best Selling", value: "best-selling" },
+    { label: "Trending", value: "trending" },
+    { label: "Old Products", value: "old" },
   ];
 
   // Same categories as home page "Browse by Category"
@@ -129,6 +137,24 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
   const filteredProducts = useMemo(() => {
     let filtered = [...products];
 
+    // Filter by product type (new arrival, best selling, trending, old)
+    if (selectedFilter === "new-arrival") {
+      filtered = filtered.filter((product) => product.isNewArrival);
+    } else if (selectedFilter === "best-selling") {
+      filtered = filtered.filter((product) => product.isBestSelling);
+    } else if (selectedFilter === "trending") {
+      filtered = filtered.filter((product) => product.isTrending);
+    } else if (selectedFilter === "old") {
+      // Old products are those without any special flags
+      filtered = filtered.filter(
+        (product) =>
+          !product.isNewArrival &&
+          !product.isBestSelling &&
+          !product.isTrending
+      );
+    }
+    // "latest" shows all products (no filter)
+
     // Filter by categories
     if (selectedCategories.length > 0) {
       filtered = filtered.filter((product) =>
@@ -144,7 +170,7 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
     );
 
     return filtered;
-  }, [products, selectedCategories, priceRange]);
+  }, [products, selectedCategories, priceRange, selectedFilter]);
 
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
@@ -157,6 +183,7 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
     minPrice?: number;
     maxPrice?: number;
     page?: number;
+    filter?: string;
   }) => {
     const params = new URLSearchParams(searchParams.toString());
 
@@ -201,6 +228,14 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
       }
     }
 
+    if (updates.filter !== undefined) {
+      if (updates.filter && updates.filter !== "latest") {
+        params.set("filter", updates.filter);
+      } else {
+        params.delete("filter");
+      }
+    }
+
     router.push(`?${params.toString()}`, { scroll: false });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [searchParams, router, idToSlug]);
@@ -217,6 +252,10 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
 
   const handlePriceChange = (min: number, max: number) => {
     updateURL({ minPrice: min, maxPrice: max, page: 1 });
+  };
+
+  const handleFilterChange = (filterValue: string) => {
+    updateURL({ filter: filterValue, page: 1 });
   };
 
   const handleClearFilters = () => {
@@ -371,7 +410,11 @@ const ShopWithSidebar = ({ products }: ShopWithSidebarProps) => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} />
+                    <CustomSelect
+                      options={options}
+                      selectedValue={selectedFilter}
+                      onChange={handleFilterChange}
+                    />
 
                     <p>
                       Showing <span className="text-dark">{startIndex + 1}-{Math.min(endIndex, filteredProducts.length)}</span> of{" "}

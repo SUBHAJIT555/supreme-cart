@@ -5,23 +5,14 @@ import { useAppSelector, AppDispatch } from "@/redux/store";
 import { useDispatch } from "react-redux";
 import { selectCartItems, selectTotalPrice, removeAllItemsFromCart } from "@/redux/features/cart-slice";
 import Breadcrumb from "../Common/Breadcrumb";
-import Shipping from "./Shipping";
-import PaymentMethod from "./PaymentMethod";
-import Coupon from "./Coupon";
 import Billing from "./Billing";
-
-const PAYMENT_LABELS: Record<string, string> = {
-  cash: "Cash on Delivery",
-  upi: "UPI",
-  online_banking: "Online Banking",
-};
+import Shipping from "./Shipping";
 
 const Checkout = () => {
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const cartItems = useAppSelector(selectCartItems);
   const total = useAppSelector(selectTotalPrice);
-  const [paymentMethod, setPaymentMethod] = useState("cash");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -73,7 +64,6 @@ const Checkout = () => {
           state: "",
           country,
           notes,
-          paymentMethod: PAYMENT_LABELS[paymentMethod] || paymentMethod,
           orderItems,
           total,
         }),
@@ -97,7 +87,7 @@ const Checkout = () => {
 
   return (
     <>
-      <Breadcrumb title={"Checkout"} pages={["checkout"]} />
+      <Breadcrumb title={"Request for Quote"} pages={["request for quote"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <form onSubmit={handleSubmit}>
@@ -176,9 +166,6 @@ const Checkout = () => {
                   </div>
                 </div>
 
-                <Coupon />
-                <PaymentMethod value={paymentMethod} onChange={setPaymentMethod} />
-
                 {error && (
                   <p className="mt-4 text-red text-sm" role="alert">
                     {error}
@@ -190,7 +177,7 @@ const Checkout = () => {
                   disabled={submitting || cartItems.length === 0}
                   className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Processing…" : "Process to Checkout"}
+                  {submitting ? "Processing…" : "Ask for Quote"}
                 </button>
               </div>
             </div>
