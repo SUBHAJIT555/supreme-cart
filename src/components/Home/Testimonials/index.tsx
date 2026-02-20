@@ -40,7 +40,7 @@ const Testimonials = () => {
                   Testimonials
                 </span>
                 <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-                  User Feedbacks
+                  What Our Customers Say
                 </h2>
               </div>
 
