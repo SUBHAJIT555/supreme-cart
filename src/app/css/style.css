@@ -173,6 +173,19 @@ input[type='search']::-webkit-search-results-decoration {
   @apply w-auto h-auto;
 }
 
+/* Equal height testimonial cards */
+.testimonial-swiper-equal .swiper-wrapper {
+  align-items: stretch;
+}
+.testimonial-swiper-equal .swiper-slide {
+  height: auto;
+  display: flex;
+}
+.testimonial-swiper-equal .swiper-slide > * {
+  flex: 1;
+  min-height: 0;
+}
+
 .img-zoom-container img {
   transition: 0.8s;
 }

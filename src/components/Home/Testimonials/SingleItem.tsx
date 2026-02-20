@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const SingleItem = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="shadow-testimonial bg-white rounded-[10px] py-7.5 px-4 sm:px-8.5 m-1">
-      <div className="flex items-center gap-1 mb-5">
+    <div className="h-full flex flex-col shadow-testimonial bg-white rounded-[10px] py-7.5 px-4 sm:px-8.5 m-1">
+      <div className="flex items-center gap-1 mb-5 shrink-0">
         <Image
           src="/images/icons/icon-star.svg"
           alt="star icon"
@@ -38,9 +38,9 @@ const SingleItem = ({ testimonial }: { testimonial: Testimonial }) => {
         />
       </div>
 
-      <p className="text-dark mb-6">{testimonial.review}</p>
+      <p className="text-dark mb-6 flex-1 min-h-0">{testimonial.review}</p>
 
-      <a href="#" className="flex items-center gap-4">
+      <a href="#" className="flex items-center gap-4 shrink-0">
         <div className="w-12.5 h-12.5 rounded-full overflow-hidden">
           <Image
             src={testimonial.authorImg}

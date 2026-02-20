@@ -85,6 +85,7 @@ const Testimonials = () => {
 
             <Swiper
               ref={sliderRef}
+              className="testimonial-swiper-equal"
               slidesPerView={3}
               spaceBetween={20}
               breakpoints={{
@@ -103,7 +104,7 @@ const Testimonials = () => {
               }}
             >
               {testimonialsData.map((item, key) => (
-                <SwiperSlide key={key}>
+                <SwiperSlide key={key} className="h-full">
                   <SingleItem testimonial={item} />
                 </SwiperSlide>
               ))}

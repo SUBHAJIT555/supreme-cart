@@ -2,46 +2,40 @@ import { Testimonial } from "@/types/testimonial";
 
 const testimonialsData: Testimonial[] = [
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Davis Dorwart",
+    review: `Great quality products at honest prices. Ordered a wireless mouse and notebooks—delivery was fast and packaging was neat. Will order again from Supreme Cart.`,
+    authorName: "Priya Sharma",
     authorImg: "/images/users/user-01.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "College Student",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Wilson Dias",
+    review: `Needed stationery and a power bank in a hurry. Supreme Cart had everything under one roof. Cash on delivery made it so convenient. Highly recommend!`,
+    authorName: "Rahul Verma",
     authorImg: "/images/users/user-02.jpg",
-    authorRole: "Backend Developer",
+    authorRole: "Software Engineer",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Miracle Exterm",
+    review: `Bought books and a few garments for my kids. Prices are really good and everything arrived in perfect condition. This is my go-to for daily essentials now.`,
+    authorName: "Anita Krishnan",
     authorImg: "/images/users/user-03.jpg",
-    authorRole: "Serial Entrepreneur",
+    authorRole: "Homemaker",
   },
   {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Thomas Frank",
+    review: `Simple website, no fuss. Found the exact USB hub I needed at a better price than other sites. UPI payment was smooth. Happy customer.`,
+    authorName: "Vikram Singh",
     authorImg: "/images/users/user-01.jpg",
+    authorRole: "Freelancer",
+  },
+  {
+    review: `Ordered electronics and stationery multiple times. Quality is consistent and delivery is always on time. Supreme Cart is reliable and affordable.`,
+    authorName: "Kavitha Reddy",
+    authorImg: "/images/users/user-02.jpg",
+    authorRole: "Teacher",
+  },
+  {
+    review: `Best place for gadgets and books under 10k. No hidden charges, and the checkout process is straightforward. Already recommended to my friends.`,
+    authorName: "Arjun Mehta",
+    authorImg: "/images/users/user-03.jpg",
     authorRole: "Entrepreneur",
-  },
-  {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Dave Smith",
-    authorImg: "/images/users/user-02.jpg",
-    authorRole: "Serial Entrepreneur",
-  },
-  {
-    review: `Lorem ipsum dolor sit amet, adipiscing elit. Donec
-    malesuada justo vitaeaugue suscipit beautiful vehicula`,
-    authorName: "Davis Dorwart",
-    authorImg: "/images/users/user-03.jpg",
-    authorRole: "Serial Entrepreneur",
   },
 ];
 
