@@ -1,11 +1,29 @@
 <?php
+declare(strict_types=1);
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(E_ALL);
+
+set_error_handler(function ($errno, $errstr, $errfile, $errline) {
+    error_log("PHP Error [$errno]: $errstr in $errfile on line $errline");
+    http_response_code(500);
+    echo json_encode(['error' => 'An error occurred. Please try again later.']);
+    exit;
+});
+
+set_exception_handler(function ($e) {
+    error_log("Uncaught Exception: " . $e->getMessage() . " in " . $e->getFile() . ":" . $e->getLine());
+    http_response_code(500);
+    echo json_encode(['error' => 'An error occurred. Please try again later.']);
+    exit;
+});
 
 
 // --- CORS ---
 $origin  = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowed = [
-    'https://snap-gears.com',
-    'https://www.snap-gears.com',
+    'https://supreme-cart.com',
+    'https://www.supreme-cart.com',
 ];
 if ($origin && in_array($origin, $allowed, true)) {
     header("Access-Control-Allow-Origin: $origin");
@@ -23,18 +41,19 @@ mb_internal_encoding('UTF-8');
 header('Content-Type: application/json; charset=utf-8');
 
 // --- Autoload ---
-require __DIR__ . '../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(dirname(__DIR__,1));
+$dotenv = Dotenv::createImmutable(dirname(__DIR__,2));
 $dotenv->load();
 
 
 // --- Parse request body (handle both FormData and JSON) ---
 $inputData = [];
-if ($_SERVER['CONTENT_TYPE'] && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
+$contentType = $_SERVER['CONTENT_TYPE'] ?? '';
+if (strpos($contentType, 'application/json') !== false) {
     $json = file_get_contents('php://input');
     $inputData = json_decode($json, true) ?? [];
 } else {
@@ -117,7 +136,7 @@ $fromEmail = $smtpUser;
 $fromName  = 'Snap Gears Website';
 
 // --- Brand styling ---
-$brandName = 'Snap Gears';
+$brandName = 'Supreme Cart';
 $tagline   = 'Where Innovation Meets Excellence.';
 $brandColor = '#0a2540';
 $muted = '#6b7280';
