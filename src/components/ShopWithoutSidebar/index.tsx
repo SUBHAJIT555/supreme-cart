@@ -1,38 +1,107 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import Breadcrumb from "../Common/Breadcrumb";
 
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 import CustomSelect from "../ShopWithSidebar/CustomSelect";
 import { Product } from "@/types/product";
+import categoryData from "@/constants/categoryData";
 
 interface ShopWithoutSidebarProps {
   products: Product[];
 }
 
 const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [productStyle, setProductStyle] = useState("grid");
-  const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  const options = [
-    { label: "Latest Products", value: "0" },
-    { label: "Best Selling", value: "1" },
-    { label: "Old Products", value: "2" },
-  ];
+  // Helper: slug -> category id
+  const slugToId = useCallback((slug: string): number | null => {
+    const category = categoryData.find((cat) => cat.slug === slug);
+    return category ? category.id : null;
+  }, []);
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  // Category from URL (single slug, same as ShopWithSidebar)
+  const selectedCategorySlug = useMemo(() => {
+    const category = searchParams.get("category");
+    return category || "";
+  }, [searchParams]);
+
+  const currentPage = useMemo(() => {
+    const page = searchParams.get("page");
+    return page ? Number(page) : 1;
+  }, [searchParams]);
+
+  const options = useMemo(
+    () => [
+      { label: "All Categories", value: "" },
+      ...categoryData.map((category) => ({
+        label: category.title,
+        value: category.slug,
+      })),
+    ],
+    []
+  );
+
+  // Filter products by category (same logic as ShopWithSidebar)
+  const filteredProducts = useMemo(() => {
+    if (!selectedCategorySlug) return [...products];
+    const categoryId = slugToId(selectedCategorySlug);
+    if (categoryId === null) return [...products];
+    return products.filter((p) => p.categoryId === categoryId);
+  }, [products, selectedCategorySlug, slugToId]);
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const startIndex = (currentPage - 1) * productsPerPage;
   const endIndex = startIndex + productsPerPage;
-  const currentProducts = products.slice(startIndex, endIndex);
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  const updateURL = useCallback(
+    (updates: { category?: string; page?: number }) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (updates.category !== undefined) {
+        if (updates.category) {
+          params.set("category", updates.category);
+        } else {
+          params.delete("category");
+        }
+      }
+
+      if (updates.page !== undefined) {
+        if (updates.page > 1) {
+          params.set("page", updates.page.toString());
+        } else {
+          params.delete("page");
+        }
+      }
+
+      router.push(`?${params.toString()}`, { scroll: false });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [searchParams, router]
+  );
 
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
-      setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      updateURL({ page });
     }
   };
+
+  const handleCategoryChange = (categoryValue: string) => {
+    updateURL({ category: categoryValue || "", page: 1 });
+  };
+
+  // Reset to page 1 when total pages shrinks below current page
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      updateURL({ page: 1 });
+    }
+  }, [totalPages, currentPage, updateURL]);
 
   const getPageNumbers = () => {
     const pages: (number | string)[] = [];
@@ -84,10 +153,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                 <div className="flex items-center justify-between">
                   {/* <!-- top bar left --> */}
                   <div className="flex flex-wrap items-center gap-4">
-                    <CustomSelect options={options} />
+                    <CustomSelect options={options} selectedValue={selectedCategorySlug} onChange={handleCategoryChange} />
 
                     <p>
-                      Showing <span className="text-dark">{products.length}</span>{" "}
+                      Showing <span className="text-dark">{filteredProducts.length}</span>{" "}
                       Products
                     </p>
                   </div>
@@ -97,11 +166,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                     <button
                       onClick={() => setProductStyle("grid")}
                       aria-label="button for product grid tab"
-                      className={`${
-                        productStyle === "grid"
-                          ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      className={`${productStyle === "grid"
+                        ? "bg-blue border-blue text-white"
+                        : "text-dark bg-gray-1 border-gray-3"
+                        } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <svg
                         className="fill-current"
@@ -141,11 +209,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                     <button
                       onClick={() => setProductStyle("list")}
                       aria-label="button for product list tab"
-                      className={`${
-                        productStyle === "list"
-                          ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      className={`${productStyle === "list"
+                        ? "bg-blue border-blue text-white"
+                        : "text-dark bg-gray-1 border-gray-3"
+                        } flex items-center justify-center w-10.5 h-9 rounded-[5px] border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <svg
                         className="fill-current"
@@ -175,11 +242,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
 
               {/* <!-- Products Grid Tab Content Start --> */}
               <div
-                className={`${
-                  productStyle === "grid"
-                    ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
-                    : "flex flex-col gap-7.5"
-                }`}
+                className={`${productStyle === "grid"
+                  ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
+                  : "flex flex-col gap-7.5"
+                  }`}
               >
                 {currentProducts.map((item, key) =>
                   productStyle === "grid" ? (
@@ -202,11 +268,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                           aria-label="button for pagination previous"
                           type="button"
                           disabled={currentPage === 1}
-                          className={`flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] ${
-                            currentPage === 1
-                              ? "text-gray-4 cursor-not-allowed"
-                              : "hover:text-white hover:bg-blue"
-                          }`}
+                          className={`flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] ${currentPage === 1
+                            ? "text-gray-4 cursor-not-allowed"
+                            : "hover:text-white hover:bg-blue"
+                            }`}
                         >
                           <svg
                             className="fill-current"
@@ -233,11 +298,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                           ) : (
                             <button
                               onClick={() => handlePageChange(page as number)}
-                              className={`flex py-1.5 px-3.5 duration-200 rounded-[3px] ${
-                                currentPage === page
-                                  ? "bg-blue text-white hover:text-white hover:bg-blue"
-                                  : "hover:text-white hover:bg-blue"
-                              }`}
+                              className={`flex py-1.5 px-3.5 duration-200 rounded-[3px] ${currentPage === page
+                                ? "bg-blue text-white hover:text-white hover:bg-blue"
+                                : "hover:text-white hover:bg-blue"
+                                }`}
                             >
                               {page}
                             </button>
@@ -251,11 +315,10 @@ const ShopWithoutSidebar = ({ products }: ShopWithoutSidebarProps) => {
                           aria-label="button for pagination next"
                           type="button"
                           disabled={currentPage === totalPages}
-                          className={`flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] ${
-                            currentPage === totalPages
-                              ? "text-gray-4 cursor-not-allowed"
-                              : "hover:text-white hover:bg-blue"
-                          }`}
+                          className={`flex items-center justify-center w-8 h-9 ease-out duration-200 rounded-[3px] ${currentPage === totalPages
+                            ? "text-gray-4 cursor-not-allowed"
+                            : "hover:text-white hover:bg-blue"
+                            }`}
                         >
                           <svg
                             className="fill-current"
