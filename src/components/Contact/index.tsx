@@ -1,8 +1,62 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import { siteConfig } from "@/config/site";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactSchema, type ContactFormData } from "@/lib/schemas";
 
 const Contact = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setSubmitting(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const formData = new FormData();
+      formData.append("formType", "contact");
+      formData.append("name", `${data.firstName} ${data.lastName}`);
+      formData.append("email", data.email);
+      formData.append("firstName", data.firstName);
+      formData.append("lastName", data.lastName);
+      if (data.subject) formData.append("subject", data.subject);
+      if (data.phone) formData.append("phone", data.phone);
+      if (data.message) formData.append("message", data.message);
+
+      const res = await fetch("/api/submit.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
+
+      setSuccess(true);
+      reset();
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Breadcrumb title={"Contact"} pages={["contact"]} />
@@ -88,7 +142,7 @@ const Contact = () => {
             </div>
 
             <div className="xl:max-w-[770px] w-full bg-white rounded-xl shadow-1 p-4 sm:p-7.5 xl:p-10">
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
                   <div className="w-full">
                     <label htmlFor="firstName" className="block mb-2.5">
@@ -97,11 +151,15 @@ const Contact = () => {
 
                     <input
                       type="text"
-                      name="firstName"
+                      {...register("firstName")}
                       id="firstName"
                       placeholder="Jhon"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus-ring-primary"
+                      className={`rounded-md border ${errors.firstName ? "border-red" : "border-gray-3"
+                        } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
                     />
+                    {errors.firstName && (
+                      <p className="mt-1 text-sm text-red">{errors.firstName.message}</p>
+                    )}
                   </div>
 
                   <div className="w-full">
@@ -111,12 +169,34 @@ const Contact = () => {
 
                     <input
                       type="text"
-                      name="lastName"
+                      {...register("lastName")}
                       id="lastName"
                       placeholder="Deo"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus-ring-primary"
+                      className={`rounded-md border ${errors.lastName ? "border-red" : "border-gray-3"
+                        } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
                     />
+                    {errors.lastName && (
+                      <p className="mt-1 text-sm text-red">{errors.lastName.message}</p>
+                    )}
                   </div>
+                </div>
+
+                <div className="mb-5">
+                  <label htmlFor="email" className="block mb-2.5">
+                    Email <span className="text-red">*</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    {...register("email")}
+                    id="email"
+                    placeholder="Enter your email"
+                    className={`rounded-md border ${errors.email ? "border-red" : "border-gray-3"
+                      } bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary`}
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red">{errors.email.message}</p>
+                  )}
                 </div>
 
                 <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
@@ -127,10 +207,10 @@ const Contact = () => {
 
                     <input
                       type="text"
-                      name="subject"
+                      {...register("subject")}
                       id="subject"
                       placeholder="Type your subject"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus-ring-primary"
+                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
                     />
                   </div>
 
@@ -141,10 +221,10 @@ const Contact = () => {
 
                     <input
                       type="text"
-                      name="phone"
+                      {...register("phone")}
                       id="phone"
                       placeholder="Enter your phone"
-                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus-ring-primary"
+                      className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus-ring-primary"
                     />
                   </div>
                 </div>
@@ -155,7 +235,7 @@ const Contact = () => {
                   </label>
 
                   <textarea
-                    name="message"
+                    {...register("message")}
                     id="message"
                     rows={5}
                     placeholder="Type your message"
@@ -163,11 +243,19 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
+                {error && (
+                  <p className="mb-4 text-sm text-red">{error}</p>
+                )}
+                {success && (
+                  <p className="mb-4 text-sm text-green">Message sent successfully!</p>
+                )}
+
                 <button
                   type="submit"
-                  className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark"
+                  disabled={submitting}
+                  className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>

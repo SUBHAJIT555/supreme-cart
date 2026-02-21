@@ -1,4 +1,21 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+ async rewrites() {
+    if (process.env.NODE_ENV !== 'development') {
+      return { beforeFiles: [], afterFiles: [], fallback: [] }
+    }
+
+    return {
+      beforeFiles: [
+        {
+          source: '/api/submit.php',
+          destination: 'http://localhost/ecom/api/submit.php',
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    }
+  },
+};
 
 module.exports = nextConfig;
