@@ -34,7 +34,7 @@ const Hero = () => {
 
                     <div>
                       <p className="font-medium text-dark-4 text-custom-sm mb-1.5">
-                        under ₹10,000
+                        great value
                       </p>
                       <span className="flex items-center gap-3">
                         <span className="font-medium text-heading-5 text-red">
@@ -58,12 +58,12 @@ const Hero = () => {
                 <div className="flex items-center gap-14">
                   <div>
                     <h2 className="max-w-[153px] font-semibold text-dark text-xl mb-20">
-                      <a href="/shop"> Books, Stationery & Garments </a>
+                      <a href="/shop"> Get Many More Offers </a>
                     </h2>
 
                     <div>
                       <p className="font-medium text-dark-4 text-custom-sm mb-1.5">
-                        under ₹10,000
+                        great value
                       </p>
                       <span className="flex items-center gap-3">
                         <span className="font-medium text-heading-5 text-red">

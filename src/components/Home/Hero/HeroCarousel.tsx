@@ -29,10 +29,10 @@ const HeroCarousal = () => {
           <div className="max-w-[394px] py-10 sm:py-15 lg:py-24.5 pl-4 sm:pl-7.5 lg:pl-12.5">
             <div className="flex items-center gap-4 mb-7.5 sm:mb-10">
               <span className="block font-semibold text-heading-3 sm:text-heading-1 text-blue">
-                Under
+                Supreme
               </span>
               <span className="block text-dark text-sm sm:text-custom-1 sm:leading-[24px]">
-                ₹10,000
+                Cart
                 <br />
                 Store
               </span>
@@ -43,7 +43,7 @@ const HeroCarousal = () => {
             </h1>
 
             <p>
-              Everything you need—gadgets, study supplies, books and fashion—all under ₹10,000. Quality products at great prices for India.
+              Everything you need—gadgets, study supplies, books and fashion. Quality products at great prices for India.
             </p>
 
             <Link
@@ -83,7 +83,7 @@ const HeroCarousal = () => {
             </h1>
 
             <p>
-              Shop electronics, stationery, books, garments and more—all under ₹10,000. Best deals for the Indian market.
+              Shop electronics, stationery, books, garments and more. Best deals for the Indian market.
             </p>
 
             <Link

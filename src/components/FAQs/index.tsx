@@ -13,7 +13,7 @@ const FAQs = () => {
   const faqs = [
     {
       question: "What does Supreme Cart sell?",
-      answer: "Supreme Cart is an Indian online store selling electronics (mobile accessories, smart gadgets, computer accessories, home electronics), books, stationery, and garments for men, women, and kids. All products are priced under ₹10,000."
+      answer: "Supreme Cart is an Indian online store selling electronics (mobile accessories, smart gadgets, computer accessories, home electronics), books, stationery, and garments for men, women, and kids. We focus on honest pricing and great value for Indian customers."
     },
     {
       question: "Do you deliver across India?",
@@ -40,8 +40,8 @@ const FAQs = () => {
       answer: "If you receive a damaged or incorrect product, contact us within 48 hours with your order number and photos. We will arrange a replacement or refund as per our policy."
     },
     {
-      question: "Are all products really under ₹10,000?",
-      answer: "Yes. Supreme Cart focuses on value for Indian customers. Every product on our site is priced under ₹10,000—electronics, books, stationery, and garments included."
+      question: "What kind of prices does Supreme Cart offer?",
+      answer: "Supreme Cart focuses on value for Indian customers. We offer honest prices on electronics, books, stationery, and garments—with regular offers and great deals."
     },
     {
       question: "How do I contact Supreme Cart?",

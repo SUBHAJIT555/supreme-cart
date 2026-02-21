@@ -5,8 +5,8 @@ import { selectProducts } from "@/lib/productSelector";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Shop Page | NextCommerce Nextjs E-commerce template",
-  description: "This is Shop Page for NextCommerce Template",
+  title: "Shop | Supreme Cart",
+  description: "Shop electronics, books, stationery, and garments at Supreme Cart. Honest prices, fast delivery across India.",
   // other metadata
 };
 

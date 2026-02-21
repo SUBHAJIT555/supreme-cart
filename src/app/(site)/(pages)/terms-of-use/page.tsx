@@ -2,8 +2,8 @@ import TermsOfUse from "@/components/TermsOfUse";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Terms of Use | NextCommerce Nextjs E-commerce template",
-  description: "This is Terms of Use Page for NextCommerce Template",
+  title: "Terms of Use | Supreme Cart",
+  description: "Terms and conditions for using Supreme Cart website and services.",
   // other metadata
 };
 

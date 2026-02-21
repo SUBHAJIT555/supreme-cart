@@ -18,7 +18,7 @@ const About = () => {
               </h1>
               <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                 {siteConfig.brand.name} is a homegrown Indian brand built for Indian shoppers. We offer electronics,
-                stationery, books, and garments—all under ₹10,000—with a focus on quality, value, and reliable
+                stationery, books, and garments at honest prices, with a focus on quality, value, and reliable
                 service across India.
               </p>
             </div>
@@ -32,7 +32,7 @@ const About = () => {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-600 mb-4">
                 {siteConfig.brand.name} was born in India with one goal: to give Indian customers a trusted place to shop
-                for electronics, stationery, books, and fashion—all at honest prices under ₹10,000. We started as a
+                for electronics, stationery, books, and fashion at honest prices. We started as a
                 small team focused on the Indian market and have grown by putting quality and customer trust first.
               </p>
               <p className="text-gray-600 mb-4">
@@ -88,7 +88,7 @@ const About = () => {
               </div>
               <p className="text-gray-600">
                 To be India&apos;s trusted everyday store—offering quality electronics, stationery, books, and garments
-                under ₹10,000, with honest pricing, safe payments, and service that puts Indian customers first.
+                at honest prices, with safe payments and service that puts Indian customers first.
               </p>
             </div>
 
@@ -116,7 +116,7 @@ const About = () => {
               </div>
               <ul className="list-disc pl-5 space-y-2 text-gray-600">
                 <li>Made for India—products and service built for Indian needs</li>
-                <li>Quality and value—curated range, all under ₹10,000</li>
+                <li>Quality and value—curated range at honest prices</li>
                 <li>Transparency and trust—clear pricing, no hidden charges</li>
                 <li>Reliable delivery and easy returns across India</li>
               </ul>
@@ -281,9 +281,9 @@ const About = () => {
                     />
                   </svg>
                 </div>
-                <h3 className="font-medium text-dark mb-2">Honest Prices, Under ₹10,000</h3>
+                <h3 className="font-medium text-dark mb-2">Honest Prices</h3>
                 <p className="text-gray-600 text-sm">
-                  Everything we sell is under ₹10,000. No inflated prices—just fair value for Indian customers.
+                  No inflated prices—just fair value for Indian customers on electronics, books, stationery, and garments.
                 </p>
               </div>
             </div>

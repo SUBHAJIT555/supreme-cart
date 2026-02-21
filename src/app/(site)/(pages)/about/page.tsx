@@ -2,8 +2,8 @@ import About from "@/components/About";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "About Us | NextCommerce Nextjs E-commerce template",
-  description: "This is About Us Page for NextCommerce Template",
+  title: "About Us | Supreme Cart",
+  description: "Learn about Supreme Cart—India's trusted store for electronics, books, stationery, and garments.",
   // other metadata
 };
 

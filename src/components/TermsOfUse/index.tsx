@@ -66,7 +66,7 @@ const TermsOfUse = () => {
                   Products, Pricing, and Availability
                 </h2>
                 <p className="text-gray-600 mb-4">
-                  We sell electronics, stationery, books, and garments, all under ₹10,000. We try to keep product descriptions, images, and prices accurate, but we do not guarantee that everything on the site is error-free or always available. Prices are in Indian Rupees (₹) and may change. We may correct errors or update information at any time. Product availability is subject to stock.
+                  We sell electronics, stationery, books, and garments. We try to keep product descriptions, images, and prices accurate, but we do not guarantee that everything on the site is error-free or always available. Prices are in Indian Rupees (₹) and may change. We may correct errors or update information at any time. Product availability is subject to stock.
                 </p>
               </div>
 

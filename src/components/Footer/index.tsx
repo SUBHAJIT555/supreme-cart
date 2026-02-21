@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
 
             <p className="text-gray-600 mb-7.5">
-              Supreme Cart is India&apos;s trusted store for electronics, books, stationery, and garments all under ₹10,000. Enjoy honest prices, fast delivery, and support made for Indian shoppers.
+              Supreme Cart is India&apos;s trusted store for electronics, books, stationery, and garments. Enjoy honest prices, fast delivery, and support made for Indian shoppers.
             </p>
 
             {/* <!-- Social Links start --> */}

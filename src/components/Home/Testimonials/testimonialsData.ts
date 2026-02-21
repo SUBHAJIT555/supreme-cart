@@ -32,7 +32,7 @@ const testimonialsData: Testimonial[] = [
     authorRole: "Teacher",
   },
   {
-    review: `Best place for gadgets and books under 10k. No hidden charges, and the checkout process is straightforward. Already recommended to my friends.`,
+    review: `Best place for gadgets and books at great prices. No hidden charges, and the checkout process is straightforward. Already recommended to my friends.`,
     authorName: "Arjun Mehta",
     authorImg: "/images/users/user-03.jpg",
     authorRole: "Entrepreneur",

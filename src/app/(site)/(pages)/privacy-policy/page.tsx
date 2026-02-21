@@ -2,8 +2,8 @@ import PrivacyPolicy from "@/components/PrivacyPolicy";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Privacy Policy | NextCommerce Nextjs E-commerce template",
-  description: "This is Privacy Policy Page for NextCommerce Template",
+  title: "Privacy Policy | Supreme Cart",
+  description: "How Supreme Cart collects, uses, and protects your personal information.",
   // other metadata
 };
 
