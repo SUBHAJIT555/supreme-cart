@@ -11,7 +11,7 @@ import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
 import categoryData from "@/constants/categoryData";
-import { Product } from "@/types/product";
+import { selectProducts } from "@/lib/productSelector";
 
 const Header = () => {
   const router = useRouter();
@@ -26,22 +26,27 @@ const Header = () => {
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
 
-  // Get the 150 selected products for this site
-  const [products, setProducts] = useState<Product[]>([]);
+  // Get the selected products for this site using productSelector
+  // All products come from selectProducts function
+  const products = useMemo(() => {
+    try {
+      // Get site number from NEXT_PUBLIC_SITE_NUMBER (required for client components)
+      const siteNumberEnv = process.env.NEXT_PUBLIC_SITE_NUMBER;
+      const siteNumber = siteNumberEnv
+        ? parseInt(siteNumberEnv, 10)
+        : 1; // Default to 1 if not provided
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('/api/products');
-        if (response.ok) {
-          const data = await response.json();
-          setProducts(data);
-        }
-      } catch (error) {
-        console.error("Error fetching products:", error);
+      if (isNaN(siteNumber) || siteNumber < 1 || siteNumber > 40) {
+        console.warn(`Invalid site number: ${siteNumberEnv}, defaulting to 1`);
+        return selectProducts(1);
       }
-    };
-    fetchProducts();
+
+      return selectProducts(siteNumber);
+    } catch (error) {
+      console.error("Error selecting products:", error);
+      // Fallback to site 1 if there's an error
+      return selectProducts(1);
+    }
   }, []);
 
   const handleOpenCartModal = () => {
