@@ -135,7 +135,7 @@ const CookiePolicy = () => {
                     <strong className="text-dark">Email:</strong> {siteConfig.brand.email.privacy}
                   </p>
                   <p className="mb-2">
-                    <strong className="text-dark">Phone:</strong> {siteConfig.brand.phone}
+                    <strong className="text-dark">Website:</strong> {siteConfig.brand.domain}
                   </p>
                   <p>
                     <strong className="text-dark">Address:</strong> {siteConfig.brand.address.full}

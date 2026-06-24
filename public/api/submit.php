@@ -131,13 +131,13 @@ $smtpPass = $_ENV['SMTP_PASS'];
 $smtpPort = $_ENV['SMTP_PORT'];
 $smtpSecure = $_ENV['SMTP_SECURE'];
 
-$toAddresses = [['aditya@baharnani.com', 'Aditya Baharnani']];
+$toAddresses = [['info@supreme-cart.com', 'Supreme Cart']];
 $fromEmail = $smtpUser;
-$fromName  = 'Snap Gears Website';
+$fromName  = 'Supreme Cart';
 
 // --- Brand styling ---
 $brandName = 'Supreme Cart';
-$tagline   = 'Where Innovation Meets Excellence.';
+$tagline   = "India's trusted store for electronics, books, stationery, and garments.";
 $brandColor = '#0a2540';
 $muted = '#6b7280';
 $bg = '#f9fafb';

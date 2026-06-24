@@ -45,7 +45,7 @@ const FAQs = () => {
     },
     {
       question: "How do I contact Supreme Cart?",
-      answer: `Reach us by email at ${siteConfig.brand.email.general || siteConfig.brand.email.support}, phone at ${siteConfig.brand.phone}, or the contact form on our website. We're here to help during ${siteConfig.brand.businessHours}.`
+      answer: `Reach us by email at ${siteConfig.brand.email.general} or use the contact form on ${siteConfig.brand.domain}. We're here to help during ${siteConfig.brand.businessHours}.`
     },
     {
       question: "Do you have offers or discounts?",

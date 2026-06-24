@@ -152,7 +152,7 @@ const Header = () => {
             <Link className="flex-shrink-0" href="/">
               <Image
                 src="/images/logo/logo.svg"
-                alt="Logo"
+                alt="Supreme Cart"
                 width={219}
                 height={36}
               />

@@ -44,7 +44,7 @@ const RefundPolicy = () => {
                   To request a refund:
                 </p>
                 <ol className="list-decimal pl-6 mb-4 space-y-2 text-gray-600">
-                  <li>Contact us by email at {siteConfig.brand.email.support} or phone at {siteConfig.brand.phone}</li>
+                  <li>Contact us by email at {siteConfig.brand.email.support}</li>
                   <li>Provide your order number and reason for the refund</li>
                   <li>We will review your request and send you a Return Authorization (RA) number and return address</li>
                   <li>Pack the item(s) securely, ideally in the original packaging</li>
@@ -143,7 +143,7 @@ const RefundPolicy = () => {
                     <strong className="text-dark">Email:</strong> {siteConfig.brand.email.support}
                   </p>
                   <p className="mb-2">
-                    <strong className="text-dark">Phone:</strong> {siteConfig.brand.phone}
+                    <strong className="text-dark">Website:</strong> {siteConfig.brand.domain}
                   </p>
                   <p>
                     <strong className="text-dark">Address:</strong> {siteConfig.brand.address.full}
